@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "f-light";
+    src: url(./assets/Figtree-Light.ttf)
+}
+
+@font-face {
+    font-family: "f-medium";
+    src: url(./assets/Figtree-Medium.ttf)
+}
+
+@font-face {
+    font-family: "f-regular";
+    src: url(./assets/Figtree-Regular.ttf)
+}
+
+@font-face {
+    font-family: "f-semi";
+    src: url(./assets/Figtree-SemiBold.ttf)
+}
+
+@font-face {
+    font-family: "licorice";
+    src: url(./assets/Licorice-Regular.ttf)
+}
+
+body {
+    margin: 0%;
+    background-color: #F0F0F0;
+    font-family: "f-light";
+    color: #332421;
+}
+
+header {
+    height: 100vh;
+}
+
+li {
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: #332421;
+    padding: 0rem 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition-duration: 0.3s;
+}
+
+ul a:hover {
+    font-family: "f-medium";
+    /* HACER QUE SE SUBRAYE */
+}
+
+.nav-bar {
+    width: 100vw;
+    height: 11vh;
+    z-index: 1;
+    position: fixed;
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #332421;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.width-control {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem;
+}
+
+.logo-inicio{
+    width: 5rem;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.background-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ECE7E1;
+    background: linear-gradient(90deg, #ECE7E1 50%, #F0F0F0 50%);
+
+}
+
+h1 {
+    font-size: 6rem;
+    margin: 3rem;
+    font-weight: normal;
+    font-family: "f-light";
+    text-transform: uppercase;
+    color: #332421;
+    display: flex;
+    flex-direction: column;
+}
+
+.last-name {
+    font-size: 3.4rem;
+}
+
+.home-description{
+    font-size: 2.5rem;
+    font-family: "licorice";
+}
+
+.home-text {
+    width: 25%;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    font-family: "f-light";
+    text-transform: uppercase;
+}
+
+.icon-sizing {
+    font-size: 1.6em;
+    padding: 0.5rem;
+    color: #332421;
+}
+
+footer {
+    padding: 4rem 0rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #332421;
+}
+
+.logo-footer {
+    width: 7rem;
+}
+
+.footer-content {
+    width: 80vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-list {
+    margin: 0rem;
+    padding: 0rem;
+}
