@@ -30,6 +30,8 @@ body {
     color: #332421;
 }
 
+/* HEADER */
+
 header {
     height: 100vh;
 }
@@ -55,7 +57,7 @@ ul a:hover {
 .nav-bar {
     width: 100vw;
     height: 11vh;
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     background-color: #F0F0F0;
     border-bottom: 1px solid #332421;
@@ -106,7 +108,7 @@ h1 {
     font-size: 3.4rem;
 }
 
-.home-description{
+.home-description {
     font-size: 2.5rem;
     font-family: "licorice";
 }
@@ -121,11 +123,398 @@ h1 {
     text-transform: uppercase;
 }
 
-.icon-sizing {
-    font-size: 1.6em;
-    padding: 0.5rem;
-    color: #332421;
+/* MAIN */
+/* TRATAMIENTOS */
+
+.treatments {
+    height: 60vh;
+    background-color: #E9B9A6;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.transition-container {
+    width: 30%;
+    height: 22%;
+    position: absolute;
+    top: -79px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.orange-circle {
+    width: 18vh;
+    height: 100%;
+    background-color: #E9B9A6;
+    border-radius: 100%;
+    position: relative;
+}
+
+.orange-rectangle {
+    width: 42vh;
+    height: 100%;
+    background-color: #E9B9A6;
+    position: absolute;
+    top: 40px;
+}
+
+.medical-icon {
+    z-index: 1;
+    height: 8vh;
+    position: absolute;
+    top: 6px;
+}
+
+.card-container {
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1rem;
+    font-weight: normal;
+}
+
+.card-carrousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.treatments-icon {
+    height: 13vh;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.treatments-description {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.treatments-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    font-family: "f-light";
+    text-transform: uppercase;
+    border: none;
+    background-color: #332421;
+    color: #F0F0F0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.arrow-container {
+    width: 70vw;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.circles-container {
+    width: 10vw;
+    padding: 1rem 0rem 3.5rem 0rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tiny-circle {
+    height: 6px;
+    width: 6px;
+    border-radius: 100%;
+    border: #332421 solid 2px;
+}
+
+/* MARQUEE */
+
+.marquee-container {
+    position: relative;
+    height: 35px;
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #B9CEDC;
+    color: #332421;
+    display: flex;
+    align-items: center;
+}
+
+.track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 32s linear infinite;
+}
+
+.marquee-content{
+    margin: 0rem;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-30%); }
+}
+
+/* SOBRE MI */
+
+.aboutMe {
+    height: 85vh;
+    padding-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, #ECE7E1 50%, #F0F0F0 50%);
+    position: relative;
+}
+
+.aboutMe-container {
+    width: 70%;
+    height: 72%;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.description-container {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutMe-description {
+    margin: 0.5rem;
+    text-align: end;
+}
+
+p span {
+    font-family: "f-semi";
+}
+
+.dra-photo {
+    height: 88%;
+    width: 38%;
+    object-fit: cover;
+}
+
+.port-icon{
+    height: 10vh;
+    position: absolute;
+    bottom: -35px;
+}
+
+.portafolio-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* CONTACTO */
+
+.contact {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-line {
+    height: 70%;
+    width: 70%;
+    border: #332421 solid 1px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-title {
+    padding: 0rem 1rem;
+    position: absolute;
+    top: -37px;
+    background-color: #f0f0f0;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-social a, .footer-social a {
+    text-decoration: none;
+}
+
+.contact-description {
+    text-align: center;
+    width: 70%;
+    padding-bottom: 0.5rem;
+}
+
+.contact-social {
+    padding-bottom: 2rem;
+}
+
+.contact-map {
+    height: 52%;
+    width: 85%;
+}
+
+.contact-finale {
+    padding: 0rem 1rem;
+    font-size: 2rem;
+    position: absolute;
+    bottom: -53px;
+    font-family: "licorice";
+    background-color: #f0f0f0;
+}
+
+/* INSTA SECTION */
+
+.insta-container {
+    height: 16vh;
+    padding-top: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E9B9A6;
+}
+
+.insta-botton-circle {
+    height: 24vh;
+    width: 27%;
+    position: absolute;
+    bottom: -81px;
+    border-radius: 100%;
+    background-color: #E9B9A6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insta-content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insta-text {
+    width: 80%;
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.insta-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    position: absolute;
+    bottom: -20px;
+    z-index: 2;
+    font-family: "f-light";
+    text-transform: uppercase;
+    border: none;
+    background-color: #332421;
+    color: #F0F0F0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.instaButton-background {
+    height: 15vh;
+    position: absolute;
+    bottom: -67px;
+}
+
+/* FAQ */
+
+.frequently-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6rem;
+    background: linear-gradient(90deg, #F0F0F0 49.5%, #ECE7E1 49.5%);
+}
+
+.frequently-container h2 {
+    margin: 9rem 0rem 3rem 0rem;
+}
+
+.frequently-content {
+    width: 70%;
+    background-color: #F0F0F0;
+}
+
+details {
+    padding: 0.5rem 0rem;
+    border-bottom: 1px solid #332421;
+    transition-duration: 0.3s;
+}
+
+summary {
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] .plus-icon {
+    transform: rotate(45deg);
+}
+
+details[open] {
+    background-color: #ECE7E1;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #332421;
+}
+
+details:hover {
+    background-color: #ECE7E1;
+    cursor: pointer;
+}
+.plus-icon {
+    height: 3vh;
+    padding: 1rem;
+    transition-duration: 0.3s;
+}
+
+details a {
+    text-decoration: none;
+    color: #332421;
+    font-family: "f-semi";
+}
+
+details p {
+    padding: 2rem;
+}
+
+/* FOOTER */
 
 footer {
     padding: 4rem 0rem;
@@ -134,6 +523,12 @@ footer {
     align-items: center;
     justify-content: center;
     border-top: 1px solid #332421;
+}
+
+.icon-sizing {
+    font-size: 1.6em;
+    padding: 0.5rem;
+    color: #332421;
 }
 
 .logo-footer {
