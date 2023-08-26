@@ -14,34 +14,42 @@
                 <a href="#inicio">
                     <img src="assets/logo maca.png" alt="Logo Dra. Alimon" class="logo-inicio">
                 </a>
-                <ul class="nav-list">
-                    <a href="#tratamientos">
-                        <li class="nav-item">
-                            Tratamientos
+                <div class="nav-bar-responsive">
+                    <button class="button-menu">
+                        <span class="first-line"></span>
+                        <span class="second-line"></span>
+                        <span class="third-line"></span>
+                    </button>
+                    <ul class="nav-list">
+                        <li class="header-item">
+                            <a href="#tratamientos" class="nav-item">
+                                Tratamientos
+                            </a>
                         </li>
-                    </a>
-                    <a href="#sobreMi">
-                        <li class="nav-item">
-                            Sobre mi
+                        <li class="header-item">
+                            <a href="#sobreMi" class="nav-item">
+                                Sobre mi
+                            </a>
                         </li>
-                    </a>
-                    <a href="#faq">
-                        <li class="nav-item">
-                            Turnos
+                        <li class="header-item">
+                            <a href="#faq" class="nav-item">
+                                Turnos
+                            </a>
                         </li>
-                    </a>
-                    <a href="#contacto">
-                        <li class="nav-item">
-                            Contacto
+                        <li class="header-item">
+                            <a href="#contacto" class="nav-item">
+                                Contacto
+                            </a>
                         </li>
-                    </a>
-                    <a href="#faq">
-                        <li class="nav-item">
-                            Faq
+                        <li class="header-item">
+                            <a href="#faq" class="nav-item">
+                                Faq
+                            </a>
                         </li>
-                    </a>
-                </ul>
+                    </ul>
+                </div>
             </div>
+            
         </nav>
         <section class="background-header">
             <h1>
@@ -81,7 +89,7 @@
                             <p class="treatments-description">
                                 Incluye tratamientos de reemplazo hormonal bioidéntico para la menopausia y tratamientos de modulación hormonal.
                             </p>
-                            <button class="treatments-button">
+                            <button class="treatments-button" id="hormona-button">
                                 Leer más
                             </button>
                         </div>
@@ -105,8 +113,8 @@
                 </div>
             </div>
             <div class="circles-container">
-                <span id="circle-hormonas" class="tiny-circle-left"></span>
-                <span id="circle-ginecologia" class="tiny-circle-right"></span>
+                <span id="circle-hormonas" class="tiny-circle-hormonas active-circle"></span>
+                <span id="circle-gineco" class="tiny-circle-gineco"></span>
             </div>
         </section>
         <section class="marquee-container">
@@ -262,31 +270,31 @@
         <div class="footer-content">
             <nav class="footer-nav">
                 <ul class="footer-list">
-                    <a href="#tratamientos">
-                        <li class="nav-item">
+                    <li class="footer-item">
+                        <a href="#tratamientos" class="nav-item">
                             Tratamientos
-                        </li>
-                    </a>
-                    <a href="#sobreMi">
-                        <li class="nav-item">
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#sobreMi" class="nav-item">
                             Sobre mi
-                        </li>
-                    </a>
-                    <a href="#faq">
-                        <li class="nav-item">
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#faq" class="nav-item">
                             Turnos
-                        </li>
-                    </a>
-                    <a href="#contacto">
-                        <li class="nav-item">
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#contacto" class="nav-item">
                             Contacto
-                        </li>
-                    </a>
-                    <a href="#faq">
-                        <li class="nav-item">
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#faq" class="nav-item">
                             Faq
-                        </li>
-                    </a>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <nav class="footer-social">
@@ -300,6 +308,11 @@
                     <i class="icon-sizing fa-solid fa-envelope"></i>
                 </a>
             </nav>
+        </div>
+        <div class="license-container">
+            <p class="license">
+                Dra. Alimón Macarena - Especialista en Ginecología - MP 117.214
+            </p>
         </div>
     </footer>
 

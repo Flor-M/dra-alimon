@@ -1,0 +1,195 @@
+@font-face {
+    font-family: "f-light";
+    src: url(./assets/Figtree-Light.ttf)
+}
+
+@font-face {
+    font-family: "f-medium";
+    src: url(./assets/Figtree-Medium.ttf)
+}
+
+@font-face {
+    font-family: "f-regular";
+    src: url(./assets/Figtree-Regular.ttf)
+}
+
+@font-face {
+    font-family: "f-semi";
+    src: url(./assets/Figtree-SemiBold.ttf)
+}
+
+@font-face {
+    font-family: "licorice";
+    src: url(./assets/Licorice-Regular.ttf)
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0%;
+    background-color: #F0F0F0;
+    font-family: "f-light";
+    color: #332421;
+}
+
+/* HEADER */
+
+header {
+    height: 11vh;
+}
+
+li {
+    list-style: none;
+}
+.header-item {
+    padding: 0rem 1.5rem;
+}
+ul a {
+    text-decoration: none;
+    color: #332421;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition-duration: 0.3s;
+    position: relative;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    height: 1px;
+    width: 0;
+    background: #332421;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition-duration: 0.3s;
+    pointer-events: none;
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+    width: 100%;
+}
+
+.nav-bar {
+    width: 100vw;
+    height: 11vh;
+    z-index: 3;
+    position: fixed;
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #332421;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.width-control {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem;
+}
+
+.logo-inicio{
+    width: 5rem;
+}
+
+.nav-list {
+    display: flex;
+}
+
+/* MAIN */
+
+main {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1rem;
+    font-weight: normal;
+}
+
+p span {
+    font-family: "f-semi";
+}
+
+/* FOOTER */
+
+footer {
+    padding: 4rem 0rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #332421;
+}
+
+.icon-sizing {
+    font-size: 1.6em;
+    padding: 0.5rem;
+    color: #332421;
+}
+
+.logo-footer {
+    width: 7rem;
+}
+
+.footer-content {
+    width: 80vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-list {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.footer-item {
+    padding-bottom: 1rem;
+}
+
+.license {
+    font-size: 0.9rem;
+}
+
+/* MEDIAS */
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {}
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1023px) {}
+
+/* PHONE */
+
+@media (max-width: 767px) {
+
+    .footer-content {
+        padding: 2rem 0rem;
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        padding-bottom: 2rem;
+    }
+
+    .footer-social {
+        align-self: center;
+    }
+
+}

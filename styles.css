@@ -23,6 +23,10 @@
     src: url(./assets/Licorice-Regular.ttf)
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0%;
     background-color: #F0F0F0;
@@ -34,24 +38,6 @@ body {
 
 header {
     height: 100vh;
-}
-
-li {
-    list-style: none;
-}
-
-ul a {
-    text-decoration: none;
-    color: #332421;
-    padding: 0rem 1.5rem;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    transition-duration: 0.3s;
-}
-
-ul a:hover {
-    font-family: "f-medium";
-    /* HACER QUE SE SUBRAYE */
 }
 
 .nav-bar {
@@ -68,18 +54,65 @@ ul a:hover {
 
 .width-control {
     width: 80vw;
+    margin: 0rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0rem;
 }
 
 .logo-inicio{
     width: 5rem;
 }
 
+.nav-bar-responsive {
+    display: flex;
+    align-items: center;
+}
+
 .nav-list {
     display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+.header-item {
+    padding: 0rem 1.5rem;
+}
+
+ul a {
+    text-decoration: none;
+    color: #332421;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition-duration: 0.3s;
+    position: relative;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    height: 1px;
+    width: 0;
+    background: #332421;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition-duration: 0.3s;
+    pointer-events: none;
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+    width: 100%;
+}
+
+.button-menu {
+    display: none;
 }
 
 .background-header {
@@ -124,17 +157,16 @@ h1 {
 }
 
 /* MAIN */
+
 /* TRATAMIENTOS */
 
 .treatments {
-    height: 60vh;
-    padding: 4rem 0rem;
+    padding: 11vh 0vh;
     background-color: #E9B9A6;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .transition-container {
@@ -171,12 +203,10 @@ h1 {
 }
 
 .treatments-container {
-    height: 100%;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 h2 {
@@ -227,8 +257,9 @@ h3 {
     border: none;
     background-color: #332421;
     color: #F0F0F0;
+    border: 1px solid transparent;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .arrow-left,
@@ -247,28 +278,35 @@ h3 {
 }
 
 .arrow-left:hover,
-.arrow-right:hover,
-.tiny-circle-right:hover,
-.tiny-circle-left:hover {
+.arrow-right:hover {
     cursor: pointer;
     transform: scale(1.2);
 }
 
+.tiny-circle-hormonas:hover,
+.tiny-circle-gineco:hover {
+    background-color: #332421;
+}
+
 .circles-container {
     width: 10vw;
-    padding: 1rem 0rem 3.5rem 0rem;
+    padding-top: 2.5rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.tiny-circle-right,
-.tiny-circle-left {
+.tiny-circle-hormonas,
+.tiny-circle-gineco {
     height: 6px;
     width: 6px;
     border-radius: 100%;
     border: #332421 solid 2px;
     transition: .5s ease;
+}
+
+.active-circle {
+    background-color: #332421;
 }
 
 /* MARQUEE */
@@ -305,8 +343,7 @@ h3 {
 /* SOBRE MI */
 
 .aboutMe {
-    height: 85vh;
-    padding: 3rem 0rem 7rem 0rem;
+    padding: 11vh 0vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -318,7 +355,8 @@ h3 {
 .aboutMe-container {
     width: 70%;
     height: 72%;
-    padding: 1rem;
+    margin-bottom: 2rem;
+    padding: 2rem 0rem 3rem 0rem;
     background-color: #f0f0f0;
     display: flex;
     align-items: center;
@@ -343,8 +381,7 @@ p span {
 }
 
 .dra-photo {
-    height: 88%;
-    width: 38%;
+    width: 30%;
     object-fit: cover;
 }
 
@@ -362,17 +399,15 @@ p span {
 /* CONTACTO */
 
 .contact {
-    height: 80vh;
-    padding: 5rem 0rem 5rem 0rem;
+    padding: 15vh 0vh 11vh 0vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .contact-line {
-    height: 70%;
     width: 70%;
-    padding-bottom: 1rem;
+    padding: 2rem 0rem;
     border: #332421 solid 1px;
     display: flex;
     justify-content: center;
@@ -387,6 +422,7 @@ p span {
 }
 
 .contact-container {
+    padding: 2rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -436,7 +472,7 @@ p span {
 
 .insta-botton-circle {
     height: 24vh;
-    width: 27%;
+    width: 42vh;
     position: absolute;
     bottom: -81px;
     border-radius: 100%;
@@ -472,14 +508,16 @@ p span {
     background-color: #332421;
     color: #F0F0F0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    transition: .5s ease;
+    transition: .3s;
+    border: 1px solid transparent;
 }
 
 .treatments-button:hover,
 .insta-button:hover {
     cursor: pointer;
-    background-color: #0d0908;
-    color: #F0F0F0;
+    background-color: #E9B9A6;
+    color: #332421;
+    border: 1px solid #332421;
 }
 
 .instaButton-background {
@@ -491,7 +529,7 @@ p span {
 /* FAQ */
 
 .frequently-container {
-    padding: 12rem 0rem 10rem 0rem;
+    padding: 15vh 0vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -500,7 +538,7 @@ p span {
 }
 
 .frequently-container h2 {
-    margin: 9rem 0rem 3rem 0rem;
+    margin-bottom: 3rem;
 }
 
 .frequently-content {
@@ -588,4 +626,184 @@ footer {
 .footer-list {
     margin: 0rem;
     padding: 0rem;
+}
+
+.footer-item {
+    padding-bottom: 1rem;
+}
+
+.license {
+    font-size: 0.9rem;
+}
+
+/* MEDIAS */
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+
+}
+
+/* TABLET AND PHONE */
+
+@media (max-width: 1388px) {
+
+    .aboutMe-container {
+        flex-direction: column;
+    }
+
+    .description-container,
+    .dra-photo {
+        width: 85%;
+    }
+
+    .aboutMe-description {
+        text-align: center;
+    }
+}
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .home-text {
+        width: 30%;
+        top: 72%;
+    }
+
+    .carrousel {
+        width: 70%;
+    }
+
+    .contact-line {
+        padding: 1rem 0rem;
+    }
+
+    .insta-container {
+        padding-top: 1rem;
+    }
+
+}
+
+/* TABLET AND PHONE */
+
+@media (max-width: 1023px) {
+
+    /* MENU HAMBURGUESA */
+
+    .nav-list {
+        display: none;
+        transition: ease .4s;
+    }
+
+    .active-nav-bar-responsive {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        padding: 3rem;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        background-color: #e9b9a6;
+        box-shadow: 0 0 0 100vmax rgb(0 0 0 / 29%);
+        color: #332421;
+        transition: ease .4s;
+    }
+
+    .button-menu {
+        height: 35px;
+        width: 40px;
+        position: absolute;
+        right: 3rem;
+        top: 2rem;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .first-line,
+    .second-line,
+    .third-line {
+        height: 2px;
+        width: 100%;
+        display: block;
+        background-color: #332421;
+        transition: .3s ease;
+    }
+    
+    .active-first-line {
+        transform: translateY(8.5px);
+    }
+    
+    .active-third-line {
+        transform: translateY(-9px);
+    }
+    
+    .active-nav-list {
+        margin: 2rem 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .active-header-item {
+        padding: 1rem 0rem;
+    }
+
+    /* MAIN */
+
+    .plus-icon {
+        height: 2vh;
+    }
+
+    .port-icon {
+        height: 10vh;
+    }
+
+}
+
+/* PHONE */
+
+@media (max-width: 767px) {
+    
+    .home-text {
+        width: 80%;
+        top: 75%;
+        text-align: center;
+    }
+
+    .carrousel {
+        width: 85%;
+    }
+
+    .treatments-description {
+        width: 70%;
+    }
+
+    .contact-line {
+        padding: 2rem 0rem;
+    }
+
+    .insta-container {
+        padding: 1rem 0rem 2rem 0rem;
+    }
+
+    .footer-content {
+        padding: 2rem 0rem;
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        padding-bottom: 2rem;
+    }
+
+    .footer-social {
+        align-self: center;
+    }
+
 }
