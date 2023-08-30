@@ -1,3 +1,4 @@
+/* FONTS */
 @font-face {
     font-family: "f-light";
     src: url(./assets/Figtree-Light.ttf)
@@ -23,6 +24,8 @@
     src: url(./assets/Licorice-Regular.ttf)
 }
 
+/* GENERAL */
+
 html {
     scroll-behavior: smooth;
 }
@@ -34,18 +37,79 @@ body {
     color: #332421;
 }
 
-/* HEADER */
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 20vh;
+    font-weight: normal;
+    font-family: "f-light";
+    text-transform: uppercase;
+    color: #332421;
+}
 
-header {
-    height: 11vh;
+h2 {
+    font-size: 2rem;
+    margin: 1rem;
+    font-weight: normal;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 li {
     list-style: none;
 }
+
+p span,
+li span {
+    font-family: "f-semi";
+}
+
+/* HEADER */
+
+/* NAV BAR */
+.nav-bar {
+    width: 100vw;
+    height: 11vh;
+    z-index: 3;
+    position: fixed;
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #332421;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.width-control {
+    width: 80vw;
+    margin: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-inicio{
+    width: 5rem;
+}
+
+/* nav-bar-responsive creado para luego hacer la caja 
+del menu en responsive */
+.nav-bar-responsive {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+}
+
 .header-item {
     padding: 0rem 1.5rem;
 }
+
 ul a {
     text-decoration: none;
     color: #332421;
@@ -76,52 +140,105 @@ ul a {
     width: 100%;
 }
 
-.nav-bar {
-    width: 100vw;
-    height: 11vh;
-    z-index: 3;
-    position: fixed;
-    background-color: #F0F0F0;
-    border-bottom: 1px solid #332421;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.width-control {
-    width: 80vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0rem;
-}
-
-.logo-inicio{
-    width: 5rem;
-}
-
-.nav-list {
-    display: flex;
+.button-menu {
+    display: none;
 }
 
 /* MAIN */
 
+/* GENERAL */
+
 main {
-    width: 70%;
+    height: 90vh;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
 }
 
-h2 {
-    font-size: 2rem;
-    margin: 1rem;
-    font-weight: normal;
+.button-container {
+    width: 60%;
+    position: absolute;
+    bottom: 18vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
-p span {
-    font-family: "f-semi";
+.arrow-icon {
+    font-size: 1.5rem;
+    color: #332421;
+}
+
+.prev,
+.next {
+    border: none;
+    transition: .5s ease;
+}
+
+.prev:hover,
+.next:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* INICIO */
+
+.inicial-description-container,
+.what-container,
+.why-container {
+    margin-top: 18vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inicial-description {
+    width: 40%;
+    text-align: center;
+}
+
+.stars-icon {
+    height: 10vh;
+    margin-top: 1rem;
+}
+
+/* QUE SON */
+
+.what-container {
+    margin-top: 13vh;
+}
+
+.what-content {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.what-list {
+    width: 25%;
+    margin: 0 3rem 0 0;
+    padding: 0;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.laboratory-photo {
+    width: 25%;
+    object-fit: cover;
+}
+
+.why-list {
+    width: 40%;
+    margin-top: 3rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* FOOTER */
@@ -174,6 +291,79 @@ footer {
 /* TABLET */
 
 @media (min-width: 768px) and (max-width: 1023px) {}
+
+/* TABLET AND PHONE */
+
+@media (max-width: 1023px) {
+
+    /* MENU HAMBURGUESA */
+    /* con el menu sin desplegar */
+    .nav-list {
+        display: none;
+        transition: ease .4s;
+    }
+
+    .button-menu {
+        height: 35px;
+        width: 40px;
+        position: absolute;
+        right: 3rem;
+        top: 2rem;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .first-line,
+    .second-line,
+    .third-line {
+        height: 2px;
+        width: 100%;
+        display: block;
+        background-color: #332421;
+        transition: .3s ease;
+    }
+
+    /* con el menu desplegado */
+    .active-nav-bar-responsive {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        padding: 3rem;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        background-color: #e9b9a6;
+        box-shadow: 0 0 0 100vmax rgb(0 0 0 / 29%);
+        color: #332421;
+        transition: ease .4s;
+    }
+    
+    .active-first-line {
+        transform: translateY(8.5px);
+    }
+    
+    .active-third-line {
+        transform: translateY(-9px);
+    }
+    
+    .active-nav-list {
+        margin: 2rem 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .active-header-item {
+        padding: 1rem 0rem;
+    }
+
+}
 
 /* PHONE */
 
