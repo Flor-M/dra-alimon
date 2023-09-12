@@ -71,7 +71,6 @@ header {
 
 /* NAV BAR */
 .nav-bar {
-    width: 100vw;
     height: 11vh;
     z-index: 3;
     position: fixed;
