@@ -38,20 +38,21 @@ body {
 }
 
 h1 {
-    margin: 0;
+    margin-top: 15vh;
     font-size: 2.5rem;
-    position: absolute;
-    top: 21vh;
     font-weight: normal;
     font-family: "f-light";
     text-transform: uppercase;
     color: #332421;
+    text-align: center;
 }
 
 h2 {
     font-size: 2rem;
     margin: 1rem;
+    text-transform: uppercase;
     font-weight: normal;
+    text-align: center;
 }
 
 h3 {
@@ -72,7 +73,10 @@ li span {
 
 /* NAV BAR */
 .nav-bar {
+    width: 100%;
     height: 11vh;
+    position: fixed;
+    z-index: 5;
     background-color: #F0F0F0;
     border-bottom: 1px solid #332421;
     display: flex;
@@ -90,6 +94,26 @@ li span {
 
 .logo-inicio{
     width: 5rem;
+}
+
+.progress-bar-line {
+    height: 5px;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    border-bottom: 2px solid rgb(51, 36, 33);
+    border-top: 2px solid rgb(51, 36, 33);
+    position: fixed;
+    top: 11vh;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+}
+
+#progress-bar-fill {
+    --progress: 0;
+    height: 100%;
+    width: var(--progress);
+    background-color: #332421;
 }
 
 /* nav-bar-responsive creado para luego hacer la caja 
@@ -141,62 +165,112 @@ ul a {
     display: none;
 }
 
-/* MAIN */
+/* INDICE MENU */
 
-/* GENERAL */
+.indice-container {
+    position: fixed;
+    top: 18vh;
+    right: 5vw;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-group {
+    height: 50vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middle-line {
+    width: 0.8vw;
+    height: 0;
+    position: absolute;
+    top: 0;
+    background-color: #332421;
+    transition-duration: 0.3s;
+}
+
+.section-menu {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid rgb(51, 36, 33);
+    background-color: #F0F0F0;
+    z-index: 2;
+    position: absolute;
+    transition-duration: 0.3s;
+}
+
+/* al hacer scroll ir chequeando la altura y segun correponda 
+activar la seccion en la que se esta */
+
+.active-section-menu {
+    background-color: #332421;
+    color: #F0F0F0;
+    z-index: 3;
+}
+
+/* cuando hago click hacer toggle en el array de los hijos de section group 
+y agregar o quitar (en el proximo click) la clase de abajo en cada uno 
+y agregar o quitar (en el proximo click) active-middle-line */
+
+.open-section-menu {
+    position: static;
+}
+
+.active-middle-line {
+    height: 50vh;
+}
+
+/* MAIN */
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.button-container {
-    width: 60%;
-    position: absolute;
-    bottom: 10vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 
-}
-
-.arrow-icon {
-    font-size: 1.5rem;
-    color: #332421;
-}
-
-.prev,
-.next {
-    background-color: transparent;
-    border: none;
-    transition: .5s ease;
-}
-
-.prev:hover,
-.next:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
-.hormones-carrousel {
-    height: 90vh;
+.hormones-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 11vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    flex-direction: column;
 }
 
 /* INICIAL */
 
 .inicial-description-container,
 .what-container,
-.why-white {
+.why-container,
+.pellet-container,
+.who-container,
+.placement-container,
+.benefits-container,
+.aproved-container,
+.sintesis-container {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.inicial-description-container {
+    justify-content: start;
+    margin: 15vh 0vw 20vh;
+    height: auto;
 }
 
 .inicial-description {
@@ -204,29 +278,46 @@ main {
     text-align: center;
 }
 
+.heart-icon,
 .stars-icon {
     height: 10vh;
     margin-top: 1rem;
 }
 
-.discorea-img,
-.discorea2-img {
-    height: 94vh;
+.discorea {
+    width: 40%;
+    height: 100%;
+    background-image: url(./assets/img/discorea-draw.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
-    top: 0;
-}
-
-.discorea-img {
     right: 0;
+    top: 50vh;
+    z-index: 1;
 }
 
-.discorea2-img {
-    left: 0;
+/* WHAT */
+
+.what-container,
+.who-container {
+    background: linear-gradient(0deg, #ECE7E1 50%, #F0F0F0 50%);
 }
 
-/* QUE SON */
+.why-white,
+.what-white,
+.who-white,
+.placement-white {
+    padding: 3rem;
+    width: 55%;
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-.what-content {
+.what-content,
+.who-content {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
@@ -234,7 +325,7 @@ main {
 }
 
 .what-list {
-    width: 25%;
+    width: 50%;
     margin: 0 3rem 0 0;
     padding: 0;
     text-align: end;
@@ -243,29 +334,37 @@ main {
     gap: 1rem;
 }
 
-.laboratory-photo {
-    width: 25%;
+.laboratory-photo,
+.who-photo {
+    width: 50%;
     object-fit: cover;
 }
 
-/* PORQUE */
+.what-container,
+.pellet-container,
+.who-container {
+    position: relative;
+}
+
+.presentaciones-hormonas {
+    height: 25%;
+    width: 25%;
+    background-image: url(./assets/img/presentaciones-hormonas.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -19%;
+    opacity: 0.4;
+}
+
+/* WHY */
 
 .why-container,
-.pellet-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(90deg, #F0F0F0 50%, #ECE7E1 50%);
-    z-index: -1;
+.placement-container {
+    background: linear-gradient(0deg, #F0F0F0 50%, #ECE7E1 50%);
 }
 
-.why-white {
-    height: 45vh;
-    width: 55%;
-    background-color: #F0F0F0;
-}
-
+.sintesis-list,
 .why-list {
     width: 75%;
     margin-top: 3rem;
@@ -275,38 +374,39 @@ main {
     gap: 1rem;
 }
 
+.sintesis-item,
 .why-item {
     padding-left: 0.6rem;
     list-style-image: url(./assets/icons/dot.png);
     list-style-position: outside;
 }
 
+.leaves-1 {
+    height: 120%;
+    width: 25%;
+    background-image: url(./assets/img/leaves-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 /* PELLET */
 
-.pellet-white {
-    height: 50vh;
-    width: 65%;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #F0F0F0;
-}
-
-.pellet-container {
-    background: linear-gradient(90deg, #ECE7E1 50%, #F0F0F0 50%);
-}
 
 .pellet-inicial-text {
-    margin: 0;
+    margin: 2rem 0rem 1.5rem;
+    text-align: center;
 }
 
 .pellet-list {
-    width: 75%;
+    width: 55%;
     padding: 0;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 .pellet-item {
@@ -337,16 +437,183 @@ main {
 
 .pellet-final-text {
     width: 52%;
+    margin: 2rem 0rem;
     text-align: center;
+}
+
+/* WHO */
+
+.planta-b {
+    height: 50%;
+    width: 25%;
+    background-image: url(./assets/img/planta-b-hormonas.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+}
+
+.who-text {
+    width: 50%;
+    margin: 0 0 0 3rem;
+}
+
+.circle {
+    height: 26%;
+    width: 16%;
+    background-image: url(./assets/img/circle.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    position: absolute;
+    bottom: -6rem;
 }
 
 /* COLOCACION */
 
+.placement-container {
+    width: 100vw;
+}
+
+.placement-content {
+    width: 55vw;
+    display: flex;
+}
+
+.placement-icon {
+    width: 6rem;
+}
+
+.placement-group {
+    width: 33%;
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: solid 1px #332421;
+}
+
+.placement-group p {
+    margin: 2rem 0rem;
+}
+
 /* BENEFICIOS */
+
+.benefits-list {
+    width: 100vw;
+    padding: 0;
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.benefits-item-a,
+.benefits-item-b {
+    padding: 0.7rem 0rem;
+    width: 100%;
+    text-align: center;
+}
+
+.benefits-item-b {
+    background: #F0F0F0;
+}
+
+.benefits-item-a {
+    background: #ECE7E1;
+}
+
 
 /* APROBADO */
 
+.aproved-container {
+    background-color: #ECE7E1;
+    position: relative;
+}
+
+.leaves-2,
+.leaves-3 {
+    height: 35%;
+    width: 35%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    position: absolute;
+    z-index: 1;
+}
+
+.leaves-2 {
+    background-image: url(./assets/img/leaves-02.png);
+    top: 0;
+    left: 0;
+}
+
+.leaves-3 {
+    background-image: url(./assets/img/leaves-03.png);
+    bottom: 0;
+    right: 0;
+}
+
+.aproved-content {
+    width: 50%;
+    padding: 2rem 2rem 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #332421 solid 1px;
+    text-align: center;
+    position: relative;
+}
+
+.aproved-text {
+    margin-top: 2rem;
+}
+
+.clinic-icon {
+    height: 10vh;
+    margin-top: 1rem;
+    background-color: #ECE7E1;
+    position: absolute;
+    bottom: -2.4rem;
+    padding: 0rem 1rem;
+}
+
 /* SINTESIS */
+
+.sintesis-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    position: relative;
+}
+
+.leaves-shade{
+    height: 100%;
+    width: 90%;
+    background-image: url(./assets/img/discorea-shade.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sintesis-content {
+    width: 40vw;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f0f0f075;
+    z-index: 1;
+}
 
 /* FOOTER */
 
@@ -389,15 +656,20 @@ footer {
     font-size: 0.9rem;
 }
 
+.footer-social a {
+    text-decoration: none;
+}
+
+.license-container {
+    width: 70%;
+    text-align: center;
+}
+
 /* MEDIAS */
 
 /* DESKTOP */
 
 @media (min-width: 1024px) {}
-
-/* TABLET */
-
-@media (min-width: 768px) and (max-width: 1023px) {}
 
 /* TABLET AND PHONE */
 
@@ -470,11 +742,149 @@ footer {
         padding: 1rem 0rem;
     }
 
+    /* MAIN */
+
+    body {
+        font-size: 0.9rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }    
+
+    .inicial-description-container,
+    .what-container,
+    .why-container,
+    .pellet-container,
+    .who-container,
+    .placement-container,
+    .benefits-container,
+    .aproved-container,
+    .sintesis-container {
+        height: auto;
+    }
+
+    .inicial-description-container {
+        padding-bottom: 15rem;
+    }
+    .what-container,
+    .benefits-container {
+        padding-bottom: 10rem;
+    }
+
+    .why-container {
+        padding-top: 10rem;
+        padding-bottom: 7rem;
+    }
+
+    .pellet-container {
+        padding-top: 7rem;
+        padding-bottom: 6rem;
+    }
+
+    .who-container {
+        padding-top: 6rem;
+        padding-bottom: 10rem;
+    }
+
+    .placement-container {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+
+    .inicial-description-container {
+        margin: 6vh 0vw 0vh 0vw;
+    }
+
+    .inicial-description {
+        width: 70%;
+    }
+
+    .what-content,
+    .who-content {
+        flex-direction: column;
+    }
+
+    .what-list {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .why-list,
+    .laboratory-photo, 
+    .who-photo {
+        width: 100%;
+        margin: 3rem 0rem;
+    }
+
+    .who-text {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .placement-content {
+        width: 55vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .placement-group {
+        width: 100%;
+    }
+
+    .pellet-list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sintesis-content,
+    .aproved-content {
+        width: 70%;
+    }
+
+    .sintesis-content {
+        padding: 2rem 2rem;
+        margin: 4rem 0rem;
+    }
+
+    .aproved-content {
+        margin: 8rem 0rem;
+        padding: 1rem 1rem 5rem 1rem;
+    }
+
 }
 
 /* PHONE */
 
 @media (max-width: 767px) {
+
+    .what-white {
+        width: 56%;
+    }
+
+    .placement-white {
+        padding: 1rem;
+        width: 75%;
+    }
+
+    .placement-group {
+        margin: 2rem 0rem;
+    }
+
+    .leaves-shade {
+        background-size: cover;
+        width: 100%;
+    }
 
     .footer-content {
         padding: 2rem 0rem;
@@ -489,4 +899,213 @@ footer {
         align-self: center;
     }
 
+    .placement-content {
+        width: 85%;
+    }
+
+    .pellet-list {
+        width: 70%;
+        
+    }
+
+    .pellet-item {
+        width: 100%;
+        padding: 2.5rem 1.5rem;
+    }
+
+}
+
+/* MEDIAS ESPECIFICAS */
+
+@media (min-width: 880px) and (max-width: 1023px) {
+    .presentaciones-hormonas {
+        width: 30%;
+    }
+
+    .planta-b {
+        width: 32%;
+        top: -2%;
+    }
+}
+
+@media (min-width: 681px) and (max-width: 879px) {
+    .presentaciones-hormonas {
+        width: 39%;
+    }
+
+    .planta-b {
+        width: 40%;
+        top: -2%;
+    }
+}
+
+@media (min-width: 435px) and (max-width: 680px) {
+    .planta-b {
+        width: 55%;
+        top: -2%;
+    }
+}
+
+@media (max-width: 434px) {
+    .planta-b {
+        width: 80%;
+        top: -2%;
+    }
+}
+
+@media (min-width: 736px) and (max-width: 1023px) {
+    .discorea {
+        width: 56%;
+        top: 5%;
+    }
+
+}
+
+@media (min-width: 681px) and (max-width: 735px) {
+    .discorea {
+        width: 56%;
+        top: 5.4%;
+    }
+}
+
+@media (min-width: 521px) and (max-width: 680px) {
+    .discorea {
+        width: 56%;
+        top: 6%;
+    }
+
+    .presentaciones-hormonas {
+        width: 43%;
+    }
+}
+
+@media (min-width: 435px) and (max-width: 520px) {
+    .discorea {
+        width: 73%;
+        top: 6%;
+    }
+    
+    .presentaciones-hormonas {
+        width: 50%;
+    }
+}
+
+@media (min-width: 412px) and (max-width: 434px) {
+    .discorea {
+        top: 6.5%;
+        width: 86%;
+    }
+
+    .presentaciones-hormonas {
+        width: 60%;
+    }
+}
+
+@media (max-width: 411px) {
+    .discorea {
+        top: 7%;
+        width: 86%;
+    }
+
+    .presentaciones-hormonas {
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .circle {
+        width: 25%;
+        bottom: -15%;
+    }
+
+    .leaves-2, 
+    .leaves-3 {
+        width: 40%;
+    }
+
+    .leaves-3 {
+        bottom: 0%;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+    .leaves-1 {
+        width: 36%;
+    }
+
+    .leaves-2, 
+    .leaves-3 {
+        width: 51%;
+    }
+
+    .leaves-3 {
+        bottom: -2%;
+    }
+}
+
+@media (min-width: 455px) and (max-width: 549px) {
+    .leaves-2, 
+    .leaves-3 {
+        width: 51%;
+    }
+
+    .leaves-3 {
+        bottom: -12%;
+    }
+}
+
+@media (min-width: 398px) and (max-width: 454px) {
+    .leaves-2, 
+    .leaves-3 {
+        width: 73%;
+    }
+
+    .leaves-3 {
+        bottom: -12%;
+    }
+}
+
+@media (max-width: 397px) {
+    .leaves-2, 
+    .leaves-3 {
+        width: 73%;
+    }
+
+    .leaves-3 {
+        bottom: -16%;
+    }
+}
+
+@media (min-width: 642px) and (max-width: 768px) {
+    .circle {
+        width: 30%;
+        bottom: -15%;
+    }
+}
+
+@media (min-width: 530px) and (max-width: 641px) {
+    .circle {
+        width: 38%;
+        bottom: -15%;
+    }
+}
+
+@media (min-width: 445px) and (max-width: 529px) {
+    .circle {
+        width: 45%;
+        bottom: -15%;
+    }
+}
+
+@media (max-width: 444px) {
+    .circle {
+        width: 55%;
+        bottom: -16%;
+    }
+}
+
+@media (max-width: 549px) {
+    .leaves-1 {
+        width: 42%;
+    }
 }

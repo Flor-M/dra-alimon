@@ -11,55 +11,68 @@
     <header id="inicio">
         <nav class="nav-bar">
             <div class="width-control">
-                <a href="index.html">
+                <a href="#inicio">
                     <img src="assets/logo maca.png" alt="Logo Dra. Alimon" class="logo-inicio">
                 </a>
-                <ul class="nav-list">
-                    <li class="header-item">
-                        <a href="index.html#tratamientos" class="nav-item">
-                            Tratamientos
-                        </a>
-                    </li>
-                    <li class="header-item">
-                        <a href="index.html#sobreMi" class="nav-item">
-                            Sobre mi
-                        </a>
-                    </li>
-                    <li class="header-item">
-                        <a href="index.html#faq" class="nav-item">
-                            Turnos
-                        </a>
-                    </li>
-                    <li class="header-item">
-                        <a href="index.html#contacto" class="nav-item">
-                            Contacto
-                        </a>
-                    </li>
-                    <li class="header-item">
-                        <a href="index.html#faq" class="nav-item">
-                            Faq
-                        </a>
-                    </li>
-                </ul>
+                <div class="nav-bar-responsive">
+                    <button class="button-menu">
+                        <span class="first-line"></span>
+                        <span class="second-line"></span>
+                        <span class="third-line"></span>
+                    </button>
+                    <ul class="nav-list">
+                        <li class="header-item">
+                            <a href="#tratamientos" class="nav-item">
+                                Tratamientos
+                            </a>
+                        </li>
+                        <li class="header-item">
+                            <a href="#sobreMi" class="nav-item">
+                                Sobre mi
+                            </a>
+                        </li>
+                        <li class="header-item">
+                            <a href="#faq" class="nav-item">
+                                Turnos
+                            </a>
+                        </li>
+                        <li class="header-item">
+                            <a href="#contacto" class="nav-item">
+                                Contacto
+                            </a>
+                        </li>
+                        <li class="header-item">
+                            <a href="#faq" class="nav-item">
+                                Faq
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
+        <div class="progress-bar-line">
+            <div id="progress-bar-fill"></div>
+        </div>
     </header>
     <main>
-        <div class="progress-bar-container">
-
+        <div class="indice-container">
+            <div class="section-group">
+                <span class="active-section-menu section-menu">Inicio</span>
+                <span class="section-menu">Qué son</span>
+                <span class="section-menu">Quién las puede usar</span>
+                <span class="section-menu">Porque utilizar pellet</span>
+                <span class="section-menu">Quién puede colocárselo</span>
+                <span class="section-menu">Colocación</span>
+                <span class="section-menu">Beneficios</span>
+                <span class="section-menu">Aprovación</span>
+                <span class="section-menu">Conclusión</span>
+            </div>
+            <div class="middle-line"></div>
         </div>
-        <h1>
-            Hormonas Bio Idénticas
-        </h1>
-        <div class="button-container">
-            <button class="prev">
-                <i class="fa-solid fa-angles-left arrow-icon arrow-left"></i>
-            </button>
-            <button class="next">
-                <i class="fa-solid fa-angles-right arrow-icon arrow-right"></i>
-            </button>
-        </div>
-        <div class="hormones-carrousel">
+        <div class="hormones-container">
+            <h1>
+                Hormonas Bio Idénticas
+            </h1>
             <section class="inicial-description-container">
                 <p class="inicial-description">
                     Se sabe que a lo largo de la vida, las mujeres <span>pierden las hormonas</span> producidas durante su vida <span>fértil</span>, (estrógenos, progesterona y testosterona), generando osteoporosis, ataques cardiacos, deterioro cognitivo, irritabilidad, aumento del riesgo de cáncer de mama, ovario y endometrio, perdida del hueso y masa muscular, falta de deseo sexual, entre otros.
@@ -68,35 +81,37 @@
                     Por lo que la <span>terapia hormonal bio idéntica</span> se presenta como la forma más <span>natural, segura y efectiva</span> para tratar estos problemas, permitiendo a las mujeres mejorar su calidad de vida obteniendo una <span>longevidad saludable</span>.
                 </p>
                 <img src="./assets/icons/estrellas.png" alt="icono destello" class="stars-icon">
-                <img src="./assets/discorea.png" alt="Ilustracion de la planta Discorea Villosa" class="discorea-img">
+                <div class="discorea"></div>
             </section>
-            <!-- <section class="what-container">
-                <img src="./assets/discorea2.png" alt="Ilustracion de la planta Discorea Villosa" class="discorea2-img">
-                <h2>
-                    Que son las hormonas bio idénticas?
-                </h2>
-                <div class="what-content">
-                    <ul class="what-list">
-                        <li class="what-item">
-                            Son hormonas <span>exactamente iguales (bio idénticas) a las producidas por las mujeres</span> durante su vida fértil.
-                        </li>
-                        <li class="what-item">
-                            Y por tener estructura similar siguen el mismo metabolismo y actúan en los mismos receptores.
-                        </li>
-                        <li class="what-item">
-                            Se obtienen de una planta llamada <span>Discorea Villosa</span>, de la cual se obtiene su principio activo la diosgenina, la cual por su semejanza con las hormonas naturales se utiliza como materia prima de hormonas bio idénticas.
-                        </li>
-                        <li class="what-item">
-                            Se pueden aplicar en forma de <span>cremas</span>, en <span>comprimidos orales</span> o de <span>aplicación subcutánea</span> en forma de “pellet” mas conocido como <span>“chip”</span>.
-                        </li>
-                    </ul>
-                    <img src="./assets/laboratory.jpg" alt="Imagen ilustrativa de trabajo en laboratorio" class="laboratory-photo">
+            <section class="what-container">
+                <div class="what-white">
+                    <h2>
+                        ¿Que son las hormonas bio idénticas?
+                    </h2>
+                    <div class="what-content">
+                        <ul class="what-list">
+                            <li class="what-item">
+                                Son hormonas <span>exactamente iguales (bio idénticas) a las producidas por las mujeres</span> durante su vida fértil.
+                            </li>
+                            <li class="what-item">
+                                Y por tener estructura similar siguen el mismo metabolismo y actúan en los mismos receptores.
+                            </li>
+                            <li class="what-item">
+                                Se obtienen de una planta llamada <span>Discorea Villosa</span>, de la cual se obtiene su principio activo la diosgenina, la cual por su semejanza con las hormonas naturales se utiliza como materia prima de hormonas bio idénticas.
+                            </li>
+                            <li class="what-item">
+                                Se pueden aplicar en forma de <span>cremas</span>, en <span>comprimidos orales</span> o de <span>aplicación subcutánea</span> en forma de “pellet” mas conocido como <span>“chip”</span>.
+                            </li>
+                        </ul>
+                        <img src="./assets/img/laboratory.jpg" alt="Imagen ilustrativa de trabajo en laboratorio" class="laboratory-photo">
+                    </div>
                 </div>
-            </section> -->
-            <!-- <section class="why-container">
+                <div class="presentaciones-hormonas"></div>
+            </section>
+            <section class="why-container">
                 <div class="why-white">
                     <h2>
-                        Por qué utilizar hormonas bio idénticas?
+                        ¿Por qué utilizar hormonas bio idénticas?
                     </h2>
                     <ul class="why-list">
                         <li class="why-item">
@@ -113,146 +128,179 @@
                         </li>
                     </ul>
                 </div>
-            </section> -->
-            <!-- <section class="pellet-container">
-                <div class="pellet-white">
+            </section>
+            <section class="pellet-container">
+                <h2>
+                    ¿Por qué utilizar pellet?
+                </h2>
+                <p class="pellet-inicial-text">
+                    Porque es un método sencillo, seguro, práctico y fisiológico.
+                </p>
+                <ul class="pellet-list">
+                    <li class="pellet-item bg-blue ">
+                        <h3>
+                            Sencillo
+                        </h3>
+                        <p class="pellet-p">
+                            El procedimiento se realiza en tan solo <span>10 minutos</span>.
+                        </p>
+                    </li>
+                    <li class="pellet-item bg-orange">
+                        <h3>
+                            Seguro
+                        </h3>
+                        <p class="pellet-p">
+                            Las hormonas bio-idénticas <span>no aumentan los riesgos de desarrollar enfermedades degenerativas</span>, sino que los reducen.
+                        </p>
+                    </li>
+                    <li class="pellet-item bg-sand">
+                        <h3>
+                            Práctico
+                        </h3>
+                        <p class="pellet-p">
+                            Se colocan <span>una vez cada 6 meses</span> y se evita aplicarlos todos los días como en cremas o cápsulas vía oral.
+                        </p>
+                    </li>
+                    <li class="pellet-item bg-light-blue">
+                        <h3>
+                            Fisiológico
+                        </h3> 
+                        <p class="pellet-p">
+                            Los pellets liberan una <span>dosis constante de la hormona, evitando los picos</span> que se producen cuando se aplica una crema o se toma una pastilla una vez al día.
+                        </p>
+                    </li>
+                </ul>
+                <p class="pellet-final-text">
+                    El “pellet” proporciona una dosis constante de hormona. Funciona como un <span>reservorio de hormonas naturales</span> disponible para que el organismo las utilice.
+                </p>
+                <div class="leaves-1"></div>
+            </section>
+            <section class="who-container">
+                <div class="planta-b"></div>
+                <div class="who-white">
                     <h2>
-                        Por qué utilizar pellet?
+                        ¿Cualquier persona puede colocárselo?
                     </h2>
-                    <p class="pellet-inicial-text">
-                        Porque es un método sencillo, seguro, práctico y fisiológico.
+                    <div class="who-content">
+                        <img src="./assets/img/pellet.png" alt="Foto de un pellet" class="who-photo">
+                        <div class="who-text">
+                            <p>
+                                Su principal indicación es en aquellas pacientes que están <span>atravesando la menopausia</span> o están cercana a ella, pero <span>no tienen limite de edad</span>.
+                            </p>
+                            <p>
+                                En pacientes que aún menstrúan puede utilizarse desde alrededor de los <span>30 años</span> y en este caso se utiliza sólo testosterona, para tratar <span>síntomas específicos</span> como perdida del deseo sexual, falta de vitalidad, angustia, depresión, entre otros.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle"></div>
+            </section>
+            <section class="placement-container">
+                <div class="placement-white">
+                    <h2>
+                        ¿Cómo se coloca?
+                    </h2>
+                    <div class="placement-content">
+                        <div class="placement-group">
+                            <img class="placement-icon" src="./assets/icons/bandita.png" alt="icono de una bandita">
+                            <p>
+                                La aplicación es <span>subcutánea</span>, por medio de una mínima incisión de aproximadamente 3mm bajo <span>anestesia local</span>, generalmente en la región de la cadera, bajo la línea del cinturón.
+                            </p>
+                        </div>
+                        <div class="placement-group">
+                            <img class="placement-icon" src="./assets/icons/estrellas.png" alt="icono de estrellas">
+                            <p>
+                                Se trata de un procedimiento simple e indoloro y la persona <span>puede continuar inmediatamente con sus actividades habituales</span>.
+                            </p>
+                        </div>
+                        <div class="placement-group">
+                            <img class="placement-icon" src="./assets/icons/reloj.png" alt="icono de un reloj">
+                        <p>
+                            Habitualmente dura alrededor de <span>6 meses y se disuelve totalmente</span>, pudiéndose aplicar uno nuevo las veces que se considere necesario.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="benefits-container">
+                <h2>
+                    ¿Cuáles son los beneficios?
+                </h2>
+                <ul class="benefits-list">
+                    <li class="benefits-item-a">
+                        <span>Reduce</span> los síntomas como <span>sofocos y sequedad vaginal</span>.
+                    </li>
+                    <li class="benefits-item-b">
+                        <span>Fortalece</span> los <span>huesos</span> e incrementa la <span>masa muscular</span>.
+                    </li>
+                    <li class="benefits-item-a">
+                        Disminuye el <span>riesgo de osteoporosis</span>.
+                    </li>
+                    <li class="benefits-item-b">
+                        <span>Mejora</span> la cognición y previene la <span>enfermedad de Alzheimer</span> y la <span>demencia temprana</span>.
+                    </li>
+                    <li class="benefits-item-a">
+                        <span>Reduce</span> el riesgo de <span>ataque cardíaco</span> y <span>accidente cerebro-vascular</span>.
+                    </li>
+                    <li class="benefits-item-b">
+                        <span>Mejora</span> el <span>colesterol</span>.
+                    </li>
+                    <li class="benefits-item-a">
+                        <span>Reduce</span> las <span>arrugas</span> y la <span>flaccidez de la piel</span>.
+                    </li>
+                    <li class="benefits-item-b">
+                        <span>Disminuye</span> el <span>riesgo de cáncer</span>.
+                    </li>
+                    <li class="benefits-item-a">
+                        <span>Aumenta</span> el <span>deseo sexual</span>.
+                    </li>
+                    <li class="benefits-item-b">
+                        Da <span>sensación de bienestar</span>, mejora el estado de animo.
+                    </li>
+                    <li class="benefits-item-a">
+                        <span>Disminuye</span> la <span>grasa corporal</span>.
+                    </li>
+                </ul>
+            </section>
+            <section class="aproved-container">
+                <div class="leaves-2"></div>
+                <div class="aproved-content">
+                    <h2>
+                        ¿Esto esta aprobado científicamente?
+                    </h2>
+                    <p class="aproved-text">
+                        La ANMAT (Administración Nacional de Medicamentos, Alimentos y Tecnología medica), es la encargada de aprobar los fármacos nuevos que salen al mercado (por ejemplo las vacunas de COVID, fármacos para diferentes enfermedades, etc) evaluando si son seguros, eficaces y de calidad, antes de poder ser comercializados.
                     </p>
-                    <ul class="pellet-list">
-                        <li class="pellet-item bg-blue ">
-                            <h3>
-                                Sencillo
-                            </h3>
-                            <p class="pellet-p">
-                                El procedimiento se realiza en tan solo <span>10 minutos</span>.
-                            </p>
+                    <p>
+                        Las hormonas bio idénticas <span>no son fármacos</span>, no tienen una formula farmacológica, son <span>preparados magistrales (se obtiene de plantas)</span>, por lo que su <span>regulación</span> para su uso en el mercado <span>depende de la Salud Pública</span> y no de la ANMAT.
+                    </p>        
+                    <p>
+                        <span>Asi que la respuesta es si!</span>
+                    </p>
+                    <img src="./assets/icons/consultorio.png" alt="Icono de consultorio médico" class="clinic-icon">
+                </div>
+                <div class="leaves-3"></div>
+            </section>
+            <section class="sintesis-container">
+                <div class="leaves-shade"></div>
+                <div class="sintesis-content">
+                    <h2>
+                        En conclusión...
+                    </h2>
+                    <ul class="sintesis-list">
+                        <li class="sintesis-item">
+                            Es un tratamiento médico <span>absolutamente personalizado</span>, que debe adaptarse a las características y necesidades de cada paciente.
                         </li>
-                        <li class="pellet-item bg-orange">
-                            <h3>
-                                Seguro
-                            </h3>
-                            <p class="pellet-p">
-                                Las hormonas bio-idénticas <span>no aumentan los riesgos de desarrollar enfermedades degenerativas</span>, sino que los reducen.
-                            </p>
+                        <li class="sintesis-item">
+                            Se requiere <span>realizar una completa historia clínica</span> y <span>analizar un perfil hormonal específico</span>.
                         </li>
-                        <li class="pellet-item bg-sand">
-                            <h3>
-                                Práctico
-                            </h3>
-                            <p class="pellet-p">
-                                Se colocan <span>una vez cada 6 meses</span> y se evita aplicarlos todos los días como en cremas o cápsulas vía oral.
-                            </p>
-                        </li>
-                        <li class="pellet-item bg-light-blue">
-                            <h3>
-                                Fisiológico
-                            </h3> 
-                            <p class="pellet-p">
-                                Los pellets liberan una <span>dosis constante de la hormona, evitando los picos</span> que se producen cuando se aplica una crema o se toma una pastilla una vez al día.
-                            </p>
+                        <li class="sintesis-item">
+                            Es fundamental acompañarlo con un estilo de vida saludable, especialmente <span>alimentación equilibrada</span>, <span>actividad física</span> y <span>evitar hábitos tóxicos</span> como el consumo de tabaco y de alcohol.
                         </li>
                     </ul>
-                    <p class="pellet-final-text">
-                        El “pellet” proporciona una dosis constante de hormona. Funciona como un <span>reservorio de hormonas naturales</span> disponible para que el organismo las utilice.
-                    </p>
+                    <img src="./assets/icons/corazon.png" alt="icono corazon" class="heart-icon">
                 </div>
-            </section> -->
-            <!-- <section>
-                <h2>
-                    Cómo se coloca?
-                </h2>
-                <p>
-                    La aplicación es subcutánea, por medio de una mínima incisión de aproximadamente 3mm bajo anestesia local, generalmente en la región de la cadera, bajo la línea del cinturón.
-                </p>
-                <p>
-                    Se trata de un procedimiento simple e indoloro y la persona puede continuar inmediatamente con sus actividades habituales.
-                </p>
-                <p>
-                    Habitualmente dura alrededor de 6 meses y se disuelve totalmente, pudiéndose aplicar uno nuevo las veces que se considere necesario.
-                </p>
-            </section> -->
-            <!-- <section>
-                <h2>
-                    Cualquier persona puede colocárselo?
-                </h2>
-                <p>
-                    Su principal indicación es en aquellas pacientes que están atravesando la menopausia o están cercana a ella, pero no tienen limite de edad.
-                </p>
-                <p>
-                    En pacientes que aún menstrúan puede utilizarse desde alrededor de los 30 años y en este caso se utiliza solo testosterona, para tratar síntomas específicos como perdida del deseo sexual, falta de vitalidad, angustia, depresión, entre otros.
-                </p>
-            </section> -->
-            <!-- <section>
-                <h2>
-                    Cuáles son los beneficios?
-                </h2>
-                <ul>
-                    <li>
-                        Reduce los síntomas como sofocos y sequedad vaginal.
-                    </li>
-                    <li>
-                        Fortalece los huesos, incrementa la masa muscular y reduce el riesgo de osteoporosis.
-                    </li>
-                    <li>
-                        Mejora la cognición y previene la enfermedad de Alzheimer y la demencia temprana.
-                    </li>
-                    <li>
-                        Reduce el riesgo de ataque cardíaco y accidente cerebro- vascular.
-                    </li>
-                    <li>
-                        Mejora el colesterol.
-                    </li>
-                    <li>
-                        Reduce las arrugas y la flaccidez de la piel.
-                    </li>
-                    <li>
-                        Reduce el riesgo de cáncer.
-                    </li>
-                    <li>
-                        Aumenta el deseo sexual.
-                    </li>
-                    <li>
-                        Da sensación de bienestar, mejora el estado de animo.
-                    </li>
-                    <li>
-                        Disminuye la grasa corporal.
-                    </li>
-                </ul>
-            </section> -->
-            <!-- <section>
-                <h2>
-                    Esto esta aprobado científicamente?
-                </h2>
-                <p>
-                    La ANMAT (Administración Nacional de Medicamentos, Alimentos y Tecnología medica), es la encargada de aprobar los fármacos nuevos que salen al mercado (por ejemplo las vacunas de COVID, fármacos para diferentes enfermedades, etc) evaluando si son seguros, eficaces y de calidad, antes de poder ser comercializados.
-                </p>
-                <p>
-                    Las hormonas bio idénticas no son fármacos, no tienen una formula farmacológica, son preparados magistrales (se obtiene de plantas), por lo que su regulación para su uso en el mercado depende de la Salud Publica y no de la ANMAT.
-                </p>        
-                <p>
-                    Asi que la respuesta es si!
-                </p>
-            </section> -->
-            <!-- <section>
-                <h2>
-                    En síntesis...
-                </h2>
-                <ul>
-                    <li>
-                        Es un tratamiento médico absolutamente personalizado, que debe adaptarse a las características y necesidades de cada paciente.
-                    </li>
-                    <li>
-                        Se requiere realizar una completa historia clínica y analizar un perfil hormonal específico.
-                    </li>
-                    <li>
-                        Es fundamental acompañarlo con un estilo de vida saludable, especialmente alimentación equilibrada, actividad física y evitar hábitos tóxicos como el consumo de tabaco y de alcohol.
-                    </li>
-                </ul>
-            </section> -->
+            </section>
         </div>
     </main>
     <footer>
@@ -308,6 +356,6 @@
         </div>
     </footer>
 
-
+    <script src="./hormonas.js"></script>
 </body>
 </html>
