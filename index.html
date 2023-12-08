@@ -12,7 +12,7 @@
         <nav class="nav-bar">
             <div class="width-control">
                 <a href="#inicio">
-                    <img src="assets/logo maca.png" alt="Logo Dra. Alimon" class="logo-inicio">
+                    <img src="./assets/icons/logo-maca.webp" alt="Logo Dra. Alimon" class="logo-inicio">
                 </a>
                 <div class="nav-bar-responsive">
                     <button class="button-menu">
@@ -49,9 +49,9 @@
                     </ul>
                 </div>
             </div>
-            
         </nav>
         <section class="background-header">
+            <div class="plant-header"></div>
             <h1>
                 Dra.
                 <span class="last-name">
@@ -62,10 +62,8 @@
                 Ginecología
             </span>
             <p class="home-text">
-                Cuidado integral para el bienestar y vitalidad de la mujer.
+                Cuidado integral para el bienestar de la mujer.
             </p>
-            <!-- <span class="appointment-container"> -->
-            </span>
         </section>
     </header>
     <main>
@@ -73,48 +71,84 @@
             <div class="transition-container">
                 <div class="orange-circle"></div>
                 <div class="orange-rectangle"></div>
-                <img src="./assets/icons/medica.png" alt="Icono de la Medicina" class="medical-icon">
+                <img src="./assets/icons/medica.webp" alt="Icono de la Medicina" class="medical-icon">
             </div>
             <div class="treatments-container">
                 <h2>
                     TRATAMIENTOS
                 </h2>
-                <div class="carrousel">
-                    <div class="carrousel-container">
-                        <div class="carrousel-content">
-                            <img src="./assets/icons/medicamento-c.png" alt="Logo Hormonas Bio Idénticas" class="treatments-icon">
+                <div class="treatments-content">
+                    <div class="cards-container">
+                        <div class="card">
+                            <img src="./assets/icons/hormonas-b.webp" alt="Logo Hormonas Bio Idénticas" class="treatments-icon">
                             <h3>
                                 Hormonas Bio Idénticas
                             </h3>
                             <p class="treatments-description">
-                                Incluye tratamientos de reemplazo hormonal bioidéntico para la menopausia y tratamientos de modulación hormonal.
+                                Se las llama así por ser de origen vegetal y porque su composición química las hace similares a las humanas. 
+                                A partir de los 35 años nuestras hormonas comienzan a declinar, originando síntomas por su déficit. Por ejemplo: <span>cambios de humor, alteraciones en el sueño, sequedad vaginal, perdida de deseo sexual, falta de energía y concentración, pérdida de memoria.</span> Como así también es este déficit el q nos expone a <span>mayor riesgo de enfermedades crónicas degenerativas como el infarto, el acv, la demencia, osteoporosis, aumentando el riesgo de cáncer de mama y endometrio.</span>
+                                Estas hormonas pueden <span>administrarse en forma oral, en crema o en formato de pellet (subcutáneo).</span>
+                                Estas hormonas <span>se recetan en forma personalizada a cada paciente</span>, con dosis y cantidades exactas <span>dependiendo el déficit de cada una.</span>
+                                El objetivo es lograr una <span>modulación hormonal para estar en equilibrio, generar sensación de bienestar, vitalidad y una longevidad saludable.</span>
                             </p>
                             <button class="treatments-button" id="hormona-button">
                                 Leer más
                             </button>
                         </div>
-                        <div class="carrousel-content" >
-                            <img src="./assets/icons/dar-medical.png" alt="Logo Ginecología Clínica" class="treatments-icon">
+                        <div class="card" >
+                            <img src="./assets/icons/plasma.webp" alt="Logo Ginecología Clínica" class="treatments-icon">
                             <h3>
-                                Ginecología Clínica
+                                Plasma Rico en Plaquetas
                             </h3>
                             <p class="treatments-description">
-                                Prevención y tratamiento de patologías del tracto genital inferior.
+                                El plasma rico en plaquetas o PRP un <span>material biológico autólogo</span>, es decir, que <span>se obtiene de la misma sangre del paciente</span>, tomando una muestra por una punción venosa, que posteriormente se centrifuga para separar los distintos componentes (glóbulos blancos, rojos, plaquetas, plasma). Una porción del centrifugado contiene plasma rico en plaquetas, que son las células que participan en la coagulación.1​ Estas poseen una gran número de sustancias llamadas “factores de crecimiento” que promueven la migración y división celular. Estimulan la activación de fibroblastos con la consiguiente formación de colágeno.
+                                En cuanto al uso en ginecología regenerativa y funcional. <span>Es útil para la sequedad vaginal</span> (generada por déficit hormonal o el uso de medicamentos ej: antidepresivos o anticonceptvos), <span>para reparar cictarices producidas por el parto o la cesarea y en infecciones recurrentes como candidiasis a repetición.</span>
+                                Es un procedimiento <span>seguro, rápido y  fácil de realizar.</span>
                             </p>
-                            <button class="treatments-button">
-                                Leer más
-                            </button>
+                        </div>
+                        <div class="card" >
+                            <img src="./assets/icons/labioplastia.webp" alt="Logo Ginecología Clínica" class="treatments-icon">
+                            <h3>
+                                Labioplastia
+                            </h3>
+                            <p class="treatments-description">
+                                Es un tratamiento personalizado que <span>modela, reduce y recupera la simetría de los labios vulvares, para mejorar su aspecto estético y/o eliminar sensaciones de incomodidades que generan tanto disconfort.</span> Se puede <span>realizar en consultorio con anestesia local</span> y conlleva una rápida recuperación.
+                            </p>
+                        </div>
+                        <div class="card" >
+                            <img src="./assets/icons/blanqueamiento.webp" alt="Logo Ginecología Clínica" class="treatments-icon">
+                            <h3>
+                                Blanqueamiento vulvar
+                            </h3>
+                            <p class="treatments-description">
+                                Se refiere a un procedimiento estético que busca <span>blanquear o aclarar el color de la piel en la zona genital.</span>
+                                El uso de ropa ajustada, los cambios hormonales relacionados con la pubertad, el embarazo, el puerperio, la depilación, el sol , el sobrepeso, el envejecimiento cutáneo, diferentes enfermedades son, entre otras, las causas que pueden generar una hiperpigmentacion de la zona vulvovaginal e inguinal. 
+                                Con este procedimiento podemos <span>devolverle a la piel de la zona el color deseado.</span> Se puede puede realizar mediante <span>peeling vulvar (ácidos de aplicación local)</span> o a través de <span>tecnología laser.</span>
+                            </p>
+                        </div>
+                        <div class="card" >
+                            <img src="./assets/icons/relleno.webp" alt="Logo Ginecología Clínica" class="treatments-icon">
+                            <h3>
+                                Armonización vulvar (RELLENOS) 
+                            </h3>
+                            <p class="treatments-description">
+                                Consiste en la aplicación de diferentes productos, como puede ser <span>ÁCIDO HIALURÓNICO, PLASMA GEL,</span> etc. Para <span>generar volumen en diferentes partes de la vulva (labios mayores, punto g, cicatrices).</span>
+                                Sus principales indicaciones pueden ser <span>mejoramiento estético, corrección de cicatrices posparto, rejuvenecimiento y calidad sexual.</span>
+                            </p>
+                        </div>
+                        <div class="card" >
+                            <img src="./assets/icons/carboxiterapia.webp" alt="Logo Ginecología Clínica" class="treatments-icon">
+                            <h3>
+                                Carboxiterapia
+                            </h3>
+                            <p class="treatments-description">
+                                Es un <span>tratamiento no quirúrgico</span> que utiliza <span>dióxido de carbono (co2)</span>, aplicado mediante pequeñas inyecciones en la zona a tratar. 
+                                El gas actúa estimulando la circulación sanguínea local, mejorando la oxigenación de los tejidos estimulando la producción de colágeno y elastina.
+                                <span>Mejora la lubricación vaginal, fortalece los tejidos vaginales, mejoramiento de la incontiencia de orina leve, tiene también un efecto lipolitico en áreas donde se acumula grasa</span> (por ejemplo monte de venus).
+                            </p>
                         </div>
                     </div>
-                    <div class="arrow-container">
-                        <i class="fa-solid fa-angles-left arrow-icon arrow-left"></i>
-                        <i class="fa-solid fa-angles-right arrow-icon arrow-right"></i>
-                    </div>
                 </div>
-            </div>
-            <div class="circles-container">
-                <span id="circle-hormonas" class="tiny-circle-hormonas active-circle"></span>
-                <span id="circle-gineco" class="tiny-circle-gineco"></span>
             </div>
         </section>
         <section class="marquee-container">
@@ -154,11 +188,12 @@
                     <p class="aboutMe-description">
                         En la actualidad tengo mi <span>consultorio personal</span> donde brindo tratamientos hormonales, enfocados en el bienestar de mis pacientes y buscando siempre proporcionar opciones integrales para el cuidado de su salud.
                     </p>
+                    <div class="plant-aboutMe"></div>
                 </div>
-                <img src="./assets/img/pexels-antoni-shkraba-5215009.jpg" alt="Fotografía de la Dra. Alimón" class="dra-photo">
+                <img src="./assets/img/foto-maca-muestra.webp" alt="Fotografía de la Dra. Alimón" class="dra-photo">
             </div>
             <div class="portafolio-container">
-                <img src="./assets/icons/portafolio.png" alt="Icono de un portafolio con la frase 'Bienestar integral'" class="port-icon">
+                <img src="./assets/icons/portafolio.webp" alt="Icono de un portafolio con la frase 'Bienestar integral'" class="port-icon">
             </div>
         </section>
         <section id="contacto" class="contact">
@@ -195,15 +230,16 @@
             </div>
         </section>
         <section class="insta-container">
-            <div class="insta-botton-circle"></div>
             <div class="insta-content">
                 <p class="insta-text">
                     En redes, te mantengo al día con mis novedades, promociones y sorpresas ¡Unite a mi comunidad!
                 </p>
-                <button class="insta-button">
-                    Seguime en instagram
-                </button>
-                <img src="./assets/icons/esrella.png" alt="Fondo del botón" class="instaButton-background">
+                <div class="position-button">
+                    <button class="insta-button">
+                        Seguime en instagram
+                    </button>
+                    <img src="./assets/icons/estrella.webp" alt="Fondo del botón" class="instaButton-background">
+                </div>
             </div>
         </section>
         <section id="faq" class="frequently-container">
@@ -213,7 +249,7 @@
             <div class="frequently-content">
                 <details>
                     <summary>
-                        <img src="./assets/icons/plus.png" alt="Icono para ver la respuesta" class="plus-icon">
+                        <img src="./assets/icons/plus.webp" alt="Icono para ver la respuesta" class="plus-icon">
                         Cómo contactarme
                     </summary>
                     <p>
@@ -226,7 +262,7 @@
                 </details>
                 <details>
                     <summary>
-                        <img src="./assets/icons/plus.png" alt="Icono para ver la respuesta" class="plus-icon">
+                        <img src="./assets/icons/plus.webp" alt="Icono para ver la respuesta" class="plus-icon">
                         Cómo sacar turno
                     </summary>
                     <p>
@@ -235,7 +271,7 @@
                 </details>
                 <details>
                     <summary>
-                        <img src="./assets/icons/plus.png" alt="Icono para ver la respuesta" class="plus-icon">
+                        <img src="./assets/icons/plus.webp" alt="Icono para ver la respuesta" class="plus-icon">
                         Dónde atiendo
                     </summary>
                     <p>
@@ -244,7 +280,7 @@
                 </details>
                 <details>
                     <summary>
-                        <img src="./assets/icons/plus.png" alt="Icono para ver la respuesta" class="plus-icon">
+                        <img src="./assets/icons/plus.webp" alt="Icono para ver la respuesta" class="plus-icon">
                         Qué obras sociales atiendo
                     </summary>
                     <p>
@@ -253,7 +289,7 @@
                 </details>
                 <details>
                     <summary>
-                        <img src="./assets/icons/plus.png" alt="Icono para ver la respuesta" class="plus-icon">
+                        <img src="./assets/icons/plus.webp" alt="Icono para ver la respuesta" class="plus-icon">
                         Instrucciones para exámenes médicos
                     </summary>
                     <p>
@@ -265,33 +301,33 @@
     </main>
     <footer>
         <a href="#inicio">
-            <img src="assets/logo maca.png" alt="Logo Dra. Alimon" class="logo-footer">
+            <img src="./assets/icons/logo-maca.webp" alt="Logo Dra. Alimon" class="logo-footer">
         </a> 
         <div class="footer-content">
             <nav class="footer-nav">
                 <ul class="footer-list">
                     <li class="footer-item">
-                        <a href="#tratamientos" class="nav-item">
+                        <a href="#tratamientos">
                             Tratamientos
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="#sobreMi" class="nav-item">
+                        <a href="#sobreMi">
                             Sobre mi
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="#faq" class="nav-item">
+                        <a href="#faq">
                             Turnos
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="#contacto" class="nav-item">
+                        <a href="#contacto">
                             Contacto
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="#faq" class="nav-item">
+                        <a href="#faq">
                             Faq
                         </a>
                     </li>

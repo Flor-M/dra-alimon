@@ -26,10 +26,6 @@
 
 /* GENERAL */
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0%;
     background-color: #F0F0F0;
@@ -76,7 +72,7 @@ li span {
     width: 100%;
     height: 11vh;
     position: fixed;
-    z-index: 5;
+    z-index: 6;
     background-color: #F0F0F0;
     border-bottom: 1px solid #332421;
     display: flex;
@@ -177,13 +173,15 @@ ul a {
     align-items: center;
 }
 
-.section-group {
-    height: 50vh;
-    width: 15vw;
+.indice-group {
+    height: 38px;
+    width: 275px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
 .middle-line {
@@ -193,39 +191,88 @@ ul a {
     top: 0;
     background-color: #332421;
     transition-duration: 0.3s;
+    transition: 0.3s;
 }
 
-.section-menu {
-    width: 100%;
-    padding: 0.5rem 1rem;
+.indice-item {
+    width: 99%;
+    padding: 0.5rem 0rem;
     text-align: center;
     text-transform: uppercase;
     border: 1px solid rgb(51, 36, 33);
     background-color: #F0F0F0;
     z-index: 2;
-    position: absolute;
     transition-duration: 0.3s;
+    position: absolute;
+    transition: 0.3s;
 }
 
-/* al hacer scroll ir chequeando la altura y segun correponda 
-activar la seccion en la que se esta */
+/* 
 
-.active-section-menu {
+DETECTAR EN QUE SECCION ESTOY
+al hacer scroll ir chequeando la altura
+
+ACTIVAR EL SPAN QUE CORRESPONDA
+activar la seccion en la que se esta, agregandole esta clase
+(sacar la clase de incide-inicio y usar toggle)
+
+EVENTO EN LA SECCION QUE ESTA ACTIVA CLICK
+cuando hago click ejecutar activeIndice
+
+*/
+
+.active-indice-menu {
     background-color: #332421;
     color: #F0F0F0;
     z-index: 3;
+    transition: 0.3s;
 }
 
-/* cuando hago click hacer toggle en el array de los hijos de section group 
-y agregar o quitar (en el proximo click) la clase de abajo en cada uno 
-y agregar o quitar (en el proximo click) active-middle-line */
+/* 
 
-.open-section-menu {
+toggleIndice
+
+FUNCION PARA ABRIR Y CERRAR EL MENU 
+- hacer toggle de la clase active-indice-group en indice-group
+- hacer toggle de la clase active-middle-line en la linea
+
+*/
+
+/* 
+
+activeIndice
+
+FUNCION DEL MENU ACTIVO
+1 DESPLEGAR MENU
+ejecutar toggleIndice
+
+2 ESPERAR CLICK EN CADA SPAN PARA LLEVAR A SECCION CORRESPONDIENTE
+- traer por id los span
+- hacer eventos para cada boton esperen el click para llevar a esa seccion
+    al click:
+    a - quitar a la seccion activa la clase activa
+    b - activar el span que corresponda
+    c - llevar a la seccion
+    d - cerrar el menu: 
+        ejecutar toggleIndice
+
+3 CERRAR MENU SI SE TOCA AFUERA
+ejecutar toggleIndice
+
+*/
+
+.open-indice-group {
+    height: 410px;
+    transition: 0.3s;
+}
+
+.open-middle-line {
+    height: 410px;
+    transition: 0.3s;
+}
+
+.open-indice-item {
     position: static;
-}
-
-.active-middle-line {
-    height: 50vh;
 }
 
 /* MAIN */
@@ -240,7 +287,6 @@ main {
 
 .hormones-container {
     width: 100%;
-    overflow: hidden;
     margin-top: 11vh;
     display: flex;
     justify-content: center;
@@ -269,7 +315,7 @@ main {
 
 .inicial-description-container {
     justify-content: start;
-    margin: 15vh 0vw 20vh;
+    margin: 11vh 0vw 20vh;
     height: auto;
 }
 
@@ -287,7 +333,7 @@ main {
 .discorea {
     width: 40%;
     height: 100%;
-    background-image: url(./assets/img/discorea-draw.png);
+    background-image: url(./assets/img/discorea-draw.webp);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -349,7 +395,7 @@ main {
 .presentaciones-hormonas {
     height: 25%;
     width: 25%;
-    background-image: url(./assets/img/presentaciones-hormonas.png);
+    background-image: url(./assets/img/presentaciones-hormonas.webp);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -377,14 +423,14 @@ main {
 .sintesis-item,
 .why-item {
     padding-left: 0.6rem;
-    list-style-image: url(./assets/icons/dot.png);
+    list-style-image: url(./assets/icons/dot.webp);
     list-style-position: outside;
 }
 
 .leaves-1 {
     height: 120%;
     width: 25%;
-    background-image: url(./assets/img/leaves-01.png);
+    background-image: url(./assets/img/leaves-01.webp);
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.2;
@@ -446,7 +492,7 @@ main {
 .planta-b {
     height: 50%;
     width: 25%;
-    background-image: url(./assets/img/planta-b-hormonas.png);
+    background-image: url(./assets/img/planta-b-hormonas.webp);
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.2;
@@ -463,7 +509,7 @@ main {
 .circle {
     height: 26%;
     width: 16%;
-    background-image: url(./assets/img/circle.png);
+    background-image: url(./assets/img/circle.webp);
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.2;
@@ -546,13 +592,13 @@ main {
 }
 
 .leaves-2 {
-    background-image: url(./assets/img/leaves-02.png);
+    background-image: url(./assets/img/leaves-02.webp);
     top: 0;
     left: 0;
 }
 
 .leaves-3 {
-    background-image: url(./assets/img/leaves-03.png);
+    background-image: url(./assets/img/leaves-03.webp);
     bottom: 0;
     right: 0;
 }
@@ -595,7 +641,7 @@ main {
 .leaves-shade{
     height: 100%;
     width: 90%;
-    background-image: url(./assets/img/discorea-shade.png);
+    background-image: url(./assets/img/discorea-shade2.webp);
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.2;

@@ -26,10 +26,6 @@
 
 /* GENERAL */
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0%;
     background-color: #F0F0F0;
@@ -52,6 +48,7 @@ h2 {
     font-size: 2rem;
     margin: 1rem;
     font-weight: normal;
+    text-align: center;
 }
 
 h3 {
@@ -174,6 +171,19 @@ ul a {
     text-transform: uppercase;
 }
 
+.plant-header {
+    width: 25%;
+    height: 100%;
+    background-image: url(./assets/img/planta-index.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 1px;
+    top: -15%;
+    z-index: 1;
+    opacity: 0.2;
+}
+
 /* MAIN */
 
 /* TRATAMIENTOS */
@@ -188,8 +198,8 @@ ul a {
 }
 
 .transition-container {
-    width: 30%;
-    height: 22%;
+    width: 305px;
+    height: 131px;
     position: absolute;
     top: -79px;
     display: flex;
@@ -198,16 +208,16 @@ ul a {
 }
 
 .orange-circle {
-    width: 18vh;
-    height: 100%;
+    width: 174px;
+    height: 131px;
     background-color: #E9B9A6;
     border-radius: 100%;
     position: relative;
 }
 
 .orange-rectangle {
-    width: 42vh;
-    height: 100%;
+    width: 305px;
+    height: 131px;
     background-color: #E9B9A6;
     position: absolute;
     top: 40px;
@@ -215,7 +225,7 @@ ul a {
 
 .medical-icon {
     z-index: 1;
-    height: 8vh;
+    height: 9vh;
     position: absolute;
     top: 6px;
 }
@@ -227,23 +237,28 @@ ul a {
     align-items: center;
 }
 
-.carrousel {
-    position: relative;
-    width: 50%;
-    overflow: hidden;
+.treatments-content {
+    width: 70%;
 }
 
-.carrousel-container {
-    width: 200%;
+.cards-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
 }
 
-.carrousel-content {
+.card {
+    padding: 2rem;
+    margin: 2rem;
+    width: 30%;
     display: flex;
+    border: 1px solid #332421;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    text-align: center;
 }
 
 .treatments-icon {
@@ -277,45 +292,6 @@ ul a {
     border: 1px solid #332421;
 }
 
-.arrow-icon {
-    position: absolute;
-    top: 50%;
-    transition: .5s ease;
-}
-
-.arrow-left {
-    left: 15px;
-}
-
-.arrow-right {
-    right: 15px;
-}
-
-.arrow-icon:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
-.circles-container {
-    width: 10vw;
-    padding-top: 2.5rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.tiny-circle-hormonas,
-.tiny-circle-gineco {
-    height: 6px;
-    width: 6px;
-    border-radius: 100%;
-    border: #332421 solid 2px;
-    transition: .5s ease;
-}
-
-.active-circle {
-    background-color: #332421;
-}
 
 /* MARQUEE */
 
@@ -377,6 +353,7 @@ ul a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .aboutMe-description {
@@ -402,6 +379,20 @@ p span {
 .portafolio-container {
     display: flex;
     justify-content: center;
+}
+
+.plant-aboutMe {
+    width: 100%;
+    height: 73%;
+    transform: rotate(270deg);
+    background-image: url(./assets/img/planta-c.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -106%;
+    top: 43%;
+    z-index: 1;
+    opacity: 0.2;
 }
 
 /* CONTACTO */
@@ -469,25 +460,11 @@ p span {
 /* INSTA SECTION */
 
 .insta-container {
-    height: 16vh;
-    padding-top: 1rem;
-    position: relative;
+    padding: 3rem 0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #E9B9A6;
-}
-
-.insta-botton-circle {
-    height: 24vh;
-    width: 42vh;
-    position: absolute;
-    bottom: -81px;
-    border-radius: 100%;
-    background-color: #E9B9A6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .insta-content {
@@ -507,12 +484,10 @@ p span {
 .insta-button {
     font-size: 1rem;
     padding: 0.8rem 2rem;
-    position: absolute;
-    bottom: -20px;
+    position: relative;
     z-index: 2;
     font-family: "f-light";
     text-transform: uppercase;
-    border: none;
     background-color: #332421;
     color: #F0F0F0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -520,10 +495,18 @@ p span {
     border: 1px solid transparent;
 }
 
+.position-button {
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 .instaButton-background {
-    height: 15vh;
+    height: 12vh;
     position: absolute;
-    bottom: -67px;
+    object-position: 0px;
 }
 
 /* FAQ */
@@ -635,6 +618,15 @@ footer {
 
 .license {
     font-size: 0.9rem;
+}
+
+.footer-social a {
+    text-decoration: none;
+}
+
+.license-container {
+    width: 70%;
+    text-align: center;
 }
 
 /* MEDIAS */
@@ -760,6 +752,14 @@ footer {
 
     /* MAIN */
 
+    body {
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }    
+
     .plus-icon {
         height: 2vh;
     }
@@ -768,6 +768,25 @@ footer {
         height: 10vh;
     }
 
+}
+
+@media (max-width: 928px) {
+    
+    .treatments-content {
+        width: 78%;
+    }
+
+    .card {
+        padding: 2rem 0rem;
+        margin: 2rem 0rem;
+        width: 100%;
+        display: flex;
+        border: 1px solid #332421; 
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
 }
 
 /* PHONE */
@@ -809,4 +828,56 @@ footer {
         align-self: center;
     }
 
+}
+
+/* MEDIAS ESPECIFICAS */
+
+@media (min-width: 620px) and (max-width: 1590px) {
+    .plant-header {
+        width: 25%;
+        top: 7%;
+    }
+}
+
+@media (min-width: 490px) and (max-width: 619px) {
+    .plant-header {
+        width: 30%;
+        top: 7%;
+    }
+}
+
+@media (min-width: 410px) and (max-width: 489px) {
+    .plant-header {
+        top: -4%;
+        width: 47%;
+    }
+}
+
+@media (max-width: 409px) {
+    .plant-header {
+        top: 1%;
+        width: 47%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1179px) {
+    .plant-aboutMe {
+        height: 88%;
+        left: -66%;
+        top: -8%;
+    }
+}
+
+@media (min-width: 942px) and (max-width: 999px) {
+    .plant-aboutMe {
+        height: 73%;
+        left: -66%;
+        top: 3%;
+    }
+}
+
+@media (max-width: 941px) {
+    .plant-aboutMe {
+        display: none;
+    }
 }
