@@ -673,6 +673,10 @@ footer {
 
 @media (min-width: 1024px) and (max-width: 1260px) {
 
+    .discorea {
+        top: 58vh;
+    }
+
     .inicial-description {
         width: 70%;
     }
@@ -682,6 +686,14 @@ footer {
     .who-white,
     .placement-white {
         width: 75%;
+    }
+
+    .placement-content {
+        width: 100%;
+    }
+
+    .placement-group {
+        margin: 1rem;
     }
 }
 
