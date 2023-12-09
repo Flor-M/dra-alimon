@@ -405,6 +405,7 @@ main {
     width: 55%;
     padding: 0;
     display: flex;
+    justify-content: center;
     gap: 3rem;
 }
 
@@ -479,6 +480,7 @@ main {
 .placement-content {
     width: 55vw;
     display: flex;
+    justify-content: center;
 }
 
 .placement-icon {
@@ -666,9 +668,21 @@ footer {
 
 /* MEDIAS */
 
-/* DESKTOP */
+/* TABLET */
 
-@media (min-width: 1024px) {}
+@media (min-width: 1022) and (max-width: 1140px) {
+
+    .inicial-description {
+        width: 65%;
+    }
+
+    .why-white,
+    .what-white,
+    .who-white,
+    .placement-white {
+        width: 75%;
+    }
+}
 
 /* TABLET AND PHONE */
 
