@@ -670,10 +670,11 @@ footer {
 
 /* TABLET */
 
-@media (min-width: 1022) and (max-width: 1260px) {
+
+@media (min-width: 1024px) and (max-width: 1260px) {
 
     .inicial-description {
-        width: 65%;
+        width: 70%;
     }
 
     .why-white,
