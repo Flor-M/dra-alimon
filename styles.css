@@ -69,7 +69,7 @@ header {
 /* NAV BAR */
 .nav-bar {
     width: 100%;
-    height: 11vh;
+    height: 14vh;
     z-index: 3;
     position: fixed;
     background-color: #F0F0F0;
@@ -169,19 +169,6 @@ ul a {
     left: 10%;
     font-family: "f-light";
     text-transform: uppercase;
-}
-
-.plant-header {
-    width: 25%;
-    height: 100%;
-    background-image: url(./assets/img/planta-index.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 1px;
-    top: -15%;
-    z-index: 1;
-    opacity: 0.2;
 }
 
 /* MAIN */
@@ -651,6 +638,7 @@ footer {
     }
 
     .aboutMe-description {
+        margin: 0;
         text-align: center;
     }
 }
@@ -691,8 +679,8 @@ footer {
     }
 
     .button-menu {
-        height: 35px;
-        width: 40px;
+        height: 5vh;
+        width: 10vw;
         position: absolute;
         right: 3rem;
         top: 2rem;
@@ -758,7 +746,11 @@ footer {
     
     h2 {
         font-size: 1.5rem;
-    }    
+    }
+
+    .instaButton-background {
+        height: 15vh;
+    }
 
     .plus-icon {
         height: 2vh;
@@ -797,6 +789,8 @@ footer {
         width: 80%;
         top: 75%;
         text-align: center;
+        position: static;
+        margin-top: 5rem;
     }
 
     .carrousel {
@@ -831,34 +825,6 @@ footer {
 }
 
 /* MEDIAS ESPECIFICAS */
-
-@media (min-width: 620px) and (max-width: 1590px) {
-    .plant-header {
-        width: 25%;
-        top: 7%;
-    }
-}
-
-@media (min-width: 490px) and (max-width: 619px) {
-    .plant-header {
-        width: 30%;
-        top: 7%;
-    }
-}
-
-@media (min-width: 410px) and (max-width: 489px) {
-    .plant-header {
-        top: -4%;
-        width: 47%;
-    }
-}
-
-@media (max-width: 409px) {
-    .plant-header {
-        top: 1%;
-        width: 47%;
-    }
-}
 
 @media (min-width: 1000px) and (max-width: 1179px) {
     .plant-aboutMe {

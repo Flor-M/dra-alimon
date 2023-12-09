@@ -9,7 +9,7 @@ const navItem = document.querySelectorAll('.nav-item');
 const indiceMenu = document.querySelector('.indice-group');
 const indiceLine = document.querySelector('.middle-line');
 
-const inicialSection = document.querySelector('.hormones-container');
+const inicialSection = document.querySelector('.inicial-description-container');
 
 const whatSection = document.querySelector('.what-container');
 const whySection = document.querySelector('.why-container');
@@ -91,6 +91,8 @@ const detectSectionScroll = () => {
     /** calcular la distancia entre el top de la pagina y el final 
      * del elemento indice */
 
+    let pos_indice = indiceMenu.getBoundingClientRect();
+
     /** calcular la distancia entre el top de la pagina y el final de
      * cada section */
     let pos_inicial = inicialSection.getBoundingClientRect();
@@ -106,15 +108,17 @@ const detectSectionScroll = () => {
     /** restar la distancia del indice con la de la seccion
      * para calcular a que distancia esta la section del elemento indice
      */
-    let distance_inicial = pos_inicial.y;
-    let distance_what = pos_what.y;
-    let distance_why = pos_why.y;
-    let distance_pellet = pos_pellet.y;
-    let distance_who = pos_who.y;
-    let distance_placement = pos_placement.y;
-    let distance_benefits = pos_benefits.y;
-    let distance_aproved = pos_aproved.y;
-    let distance_sintesis = pos_sintesis.y;
+    let distance_inicial = pos_inicial.bottom - pos_indice.bottom;
+    let distance_what = pos_what.bottom - pos_indice.bottom;
+    let distance_why = pos_why.bottom - pos_indice.bottom;
+    let distance_pellet = pos_pellet.bottom - pos_indice.bottom;
+    let distance_who = pos_who.bottom - pos_indice.bottom;
+    let distance_placement = pos_placement.bottom - pos_indice.bottom;
+    let distance_benefits = pos_benefits.bottom - pos_indice.bottom;
+    let distance_aproved = pos_aproved.bottom - pos_indice.bottom;
+    let distance_sintesis = pos_sintesis.bottom - pos_indice.bottom;
+
+    console.log();
 
     /** almacenar en la variable min la distancia menos (el que esta mas cerca del 
      * elemento indice) */
