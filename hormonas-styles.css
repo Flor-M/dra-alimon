@@ -207,59 +207,12 @@ ul a {
     transition: 0.3s;
 }
 
-/* 
-
-DETECTAR EN QUE SECCION ESTOY
-al hacer scroll ir chequeando la altura
-
-ACTIVAR EL SPAN QUE CORRESPONDA
-activar la seccion en la que se esta, agregandole esta clase
-(sacar la clase de incide-inicio y usar toggle)
-
-EVENTO EN LA SECCION QUE ESTA ACTIVA CLICK
-cuando hago click ejecutar activeIndice
-
-*/
-
 .active-indice-menu {
     background-color: #332421;
     color: #F0F0F0;
     z-index: 3;
     transition: 0.3s;
 }
-
-/* 
-
-toggleIndice
-
-FUNCION PARA ABRIR Y CERRAR EL MENU 
-- hacer toggle de la clase active-indice-group en indice-group
-- hacer toggle de la clase active-middle-line en la linea
-
-*/
-
-/* 
-
-activeIndice
-
-FUNCION DEL MENU ACTIVO
-1 DESPLEGAR MENU
-ejecutar toggleIndice
-
-2 ESPERAR CLICK EN CADA SPAN PARA LLEVAR A SECCION CORRESPONDIENTE
-- traer por id los span
-- hacer eventos para cada boton esperen el click para llevar a esa seccion
-    al click:
-    a - quitar a la seccion activa la clase activa
-    b - activar el span que corresponda
-    c - llevar a la seccion
-    d - cerrar el menu: 
-        ejecutar toggleIndice
-
-3 CERRAR MENU SI SE TOCA AFUERA
-ejecutar toggleIndice
-
-*/
 
 .open-indice-group {
     height: 410px;
@@ -332,7 +285,7 @@ main {
 
 .discorea {
     width: 40%;
-    height: 100%;
+    height: 90%;
     background-image: url(./assets/img/discorea-draw.webp);
     background-size: contain;
     background-repeat: no-repeat;
