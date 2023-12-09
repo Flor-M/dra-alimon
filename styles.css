@@ -679,11 +679,8 @@ footer {
     }
 
     .button-menu {
-        height: 50px;
-        width: 60px;
-        /* position: absolute;
-        right: 3rem;
-        top: 2rem; */
+        height: 38px;
+        width: 48px;
         border: none;
         display: flex;
         flex-direction: column;
