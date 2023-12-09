@@ -683,7 +683,7 @@ footer {
 
     .button-menu {
         height: 5vh;
-        width: 10vw;
+        width: 13vw;
         position: absolute;
         right: 3rem;
         top: 2rem;
@@ -793,6 +793,14 @@ footer {
         padding-bottom: 6rem;
     }
 
+    .why-white,
+    .what-white,
+    .who-white,
+    .placement-white {
+        padding: 2rem;
+        width: 65%;
+    }
+
     .pellet-final-text {
         width: 85%;
     }
@@ -888,6 +896,10 @@ footer {
         width: 75%;
     }
 
+    .placement-content {
+        width: 70%;
+    }
+
     .placement-group {
         margin: 2rem 0rem;
     }
@@ -910,13 +922,9 @@ footer {
         align-self: center;
     }
 
-    .placement-content {
-        width: 85%;
-    }
-
     .pellet-list {
-        width: 70%;
-        
+        width: 50%;
+        text-align: center;
     }
 
     .pellet-item {

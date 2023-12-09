@@ -679,8 +679,8 @@ footer {
     }
 
     .button-menu {
-        height: 5vh;
-        width: 15vw;
+        height: 50px;
+        width: 60px;
         position: absolute;
         right: 3rem;
         top: 2rem;
@@ -746,6 +746,10 @@ footer {
     
     h2 {
         font-size: 1.5rem;
+    }
+
+    .width-h3 {
+        width: 72%;
     }
 
     .instaButton-background {
