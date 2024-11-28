@@ -5,16 +5,6 @@
 }
 
 @font-face {
-    font-family: "f-medium";
-    src: url(./assets/Figtree-Medium.ttf)
-}
-
-@font-face {
-    font-family: "f-regular";
-    src: url(./assets/Figtree-Regular.ttf)
-}
-
-@font-face {
     font-family: "f-semi";
     src: url(./assets/Figtree-SemiBold.ttf)
 }
@@ -117,6 +107,7 @@ ul a {
 
 .nav-item {
     position: relative;
+    cursor: pointer;
 }
 
 .nav-item::after {
@@ -134,6 +125,7 @@ ul a {
 .nav-item:hover::after,
 .nav-item:focus::after {
     width: 100%;
+    cursor: pointer;
 }
 
 .button-menu {
@@ -263,7 +255,6 @@ ul a {
     padding: 0.8rem 2rem;
     font-family: "f-light";
     text-transform: uppercase;
-    border: none;
     background-color: #332421;
     color: #F0F0F0;
     border: 1px solid transparent;
@@ -368,20 +359,6 @@ p span {
     justify-content: center;
 }
 
-.plant-aboutMe {
-    width: 100%;
-    height: 73%;
-    transform: rotate(270deg);
-    background-image: url(./assets/img/planta-c.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: -106%;
-    top: 43%;
-    z-index: 1;
-    opacity: 0.2;
-}
-
 /* CONTACTO */
 
 .contact {
@@ -418,6 +395,7 @@ p span {
 .contact-social a, 
 .footer-social a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .contact-description {
@@ -431,7 +409,7 @@ p span {
 }
 
 .contact-map {
-    height: 52%;
+    height: 40vh;
     width: 85%;
 }
 
@@ -566,6 +544,112 @@ details p {
     padding: 2rem;
 }
 
+.myo-msj {
+    text-decoration: none;
+    color: #332421;
+    font-family: "f-semi";
+    cursor: pointer;
+}
+
+/* COOKIE BANNER */
+
+.cookie-width {
+    display: none;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+}
+
+.cookie-container {
+    background-color: #ECE7E1;
+    color: #332421;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #332421;
+}
+
+.cookie-content {
+    width: 45vw;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cookie-group {
+    display: flex
+}
+
+.cookie-icon {
+    padding: 0rem 1rem 1rem 0rem;
+}
+
+.cookie-png {
+    width: 4rem;
+    object-fit: cover;
+}
+
+.cookie-text p {
+    margin: 0rem 0rem 0.5rem 0rem;
+}
+
+.more-info {
+    text-decoration: none;
+    color: #332421;
+    font-family: "f-semi";
+    transition-duration: 0.3s;
+}
+
+.more-info:hover {
+    color: #886b64;
+    cursor: pointer;
+}
+
+.cookie-btn {
+    margin: 1rem 0rem;
+    padding: 0.5rem 1.5rem;
+    font-family: "f-semi";
+    text-transform: uppercase;
+    background-color: #332421;
+    color: #f0f0f0;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+    align-self: start;
+}
+
+.cookie-btn:hover {
+    cursor: pointer;
+    background-color: #ECE7E1;
+    color: #332421;
+    border: 1px solid #332421;
+}
+
+.background-cookies {
+    display: none;
+    background: #0000003f;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+}
+
+.cookie-activo {
+    display: block;
+}
+
+@media (max-width: 610px) {
+    .cookie-content {
+        padding: 1rem 1.5rem; 
+        width: 80vw;
+    }
+}
+
 /* FOOTER */
 
 footer {
@@ -603,15 +687,28 @@ footer {
     padding-bottom: 1rem;
 }
 
-.license {
+.footer-item:hover {
+    cursor: pointer;
+}
+
+.license,
+.policy {
     font-size: 0.9rem;
 }
 
-.footer-social a {
+.policy {
+    color: #332421;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.license-container {
+.footer-social a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.license-container,
+.policy-container {
     width: 70%;
     text-align: center;
 }
@@ -795,10 +892,6 @@ footer {
         font-size: 1rem;
     }
 
-    .carrousel {
-        width: 85%;
-    }
-
     .treatments-description {
         width: 70%;
     }
@@ -824,28 +917,4 @@ footer {
         align-self: center;
     }
 
-}
-
-/* MEDIAS ESPECIFICAS */
-
-@media (min-width: 1000px) and (max-width: 1179px) {
-    .plant-aboutMe {
-        height: 88%;
-        left: -66%;
-        top: -8%;
-    }
-}
-
-@media (min-width: 942px) and (max-width: 999px) {
-    .plant-aboutMe {
-        height: 73%;
-        left: -66%;
-        top: 3%;
-    }
-}
-
-@media (max-width: 941px) {
-    .plant-aboutMe {
-        display: none;
-    }
 }

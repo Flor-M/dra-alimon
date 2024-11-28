@@ -5,23 +5,8 @@
 }
 
 @font-face {
-    font-family: "f-medium";
-    src: url(./assets/Figtree-Medium.ttf)
-}
-
-@font-face {
-    font-family: "f-regular";
-    src: url(./assets/Figtree-Regular.ttf)
-}
-
-@font-face {
     font-family: "f-semi";
     src: url(./assets/Figtree-SemiBold.ttf)
-}
-
-@font-face {
-    font-family: "licorice";
-    src: url(./assets/Licorice-Regular.ttf)
 }
 
 /* GENERAL */
@@ -138,6 +123,7 @@ ul a {
 
 .nav-item {
     position: relative;
+    cursor: pointer;
 }
 
 .nav-item::after {
@@ -205,6 +191,7 @@ ul a {
     transition-duration: 0.3s;
     position: absolute;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .active-indice-menu {
@@ -616,6 +603,105 @@ main {
     z-index: 1;
 }
 
+/* COOKIE BANNER */
+
+.cookie-width {
+    display: none;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+}
+
+.cookie-container {
+    background-color: #ECE7E1;
+    color: #332421;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #332421;
+}
+
+.cookie-content {
+    width: 45vw;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cookie-group {
+    display: flex
+}
+
+.cookie-icon {
+    padding: 0rem 1rem 1rem 0rem;
+}
+
+.cookie-png {
+    width: 4rem;
+    object-fit: cover;
+}
+
+.cookie-text p {
+    margin: 0rem 0rem 0.5rem 0rem;
+}
+
+.more-info {
+    text-decoration: none;
+    color: #332421;
+    font-family: "f-semi";
+    transition-duration: 0.3s;
+}
+
+.more-info:hover {
+    color: #886b64;
+    cursor: pointer;
+}
+
+.cookie-btn {
+    margin: 1rem 0rem;
+    padding: 0.5rem 1.5rem;
+    font-family: "f-semi";
+    text-transform: uppercase;
+    background-color: #332421;
+    color: #f0f0f0;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+    align-self: start;
+}
+
+.cookie-btn:hover {
+    cursor: pointer;
+    background-color: #ECE7E1;
+    color: #332421;
+    border: 1px solid #332421;
+}
+
+.background-cookies {
+    display: none;
+    background: #0000003f;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+}
+
+.cookie-activo {
+    display: block;
+}
+
+@media (max-width: 610px) {
+    .cookie-content {
+        padding: 1rem 1.5rem; 
+        width: 80vw;
+    }
+}
+
 /* FOOTER */
 
 footer {
@@ -653,20 +739,68 @@ footer {
     padding-bottom: 1rem;
 }
 
-.license {
+.license,
+.policy {
     font-size: 0.9rem;
+}
+
+.policy {
+    color: #332421;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .footer-social a {
     text-decoration: none;
+    cursor: pointer;
 }
 
-.license-container {
+.license-container,
+.policy-container-b {
     width: 70%;
     text-align: center;
 }
 
 /* MEDIAS */
+
+/* DESKTOP */
+
+@media (min-width: 2100px) {
+    .discorea {
+        top: 40vh;
+        width: 30%;
+    }
+
+    .what-container {
+        padding-bottom: 4rem;
+    }
+
+    .presentaciones-hormonas {
+        width: 15%;
+    }
+
+    .why-container {
+        width: 100%;
+        padding-top: 4.5rem;
+    }
+
+    .who-container {
+        padding-bottom: 5.5rem;
+    }
+
+    .circle {
+        width: 10%;
+        bottom: -8rem;
+    }
+
+    .placement-container {
+        padding-top: 5.5rem;
+    }
+
+    .aproved-container {
+        width: 100%;
+    }
+}
 
 /* TABLET */
 
@@ -1046,7 +1180,7 @@ footer {
 
 @media (max-width: 411px) {
     .discorea {
-        top: 7%;
+        top: 6.5%;
         width: 86%;
     }
 
