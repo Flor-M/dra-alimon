@@ -40,7 +40,7 @@ document.documentElement.style.scrollBehavior = "smooth";
 
 /** evento del boton de la card hormonas de treatments */
 hormonaButton.addEventListener('click', (e) => {
-    window.location.href = "hormonas-bioidenticas.html";
+    window.location.href = "/hormonas/hormonas-bioidenticas.html";
 });
 
 /** evento del boton para abrir y cerrar el menu hamburguesa */

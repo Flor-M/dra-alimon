@@ -1,12 +1,12 @@
 /* FONTS */
 @font-face {
     font-family: "f-light";
-    src: url(./assets/Figtree-Light.ttf)
+    src: url(/assets/Figtree-Light.ttf)
 }
 
 @font-face {
     font-family: "f-semi";
-    src: url(./assets/Figtree-SemiBold.ttf)
+    src: url(/assets/Figtree-SemiBold.ttf)
 }
 
 /* GENERAL */
